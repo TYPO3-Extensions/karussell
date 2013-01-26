@@ -1,0 +1,76 @@
+<html>
+<body>
+<p>
+Barousel + Thslide. You need this 1-2 plugins from here:
+http://labs.juliendecaudin.com/barousel/
+Copy them to one file and include them like this:
+plugin.tx_karussell_pi1.jsFile = fileadmin/template/files/jquery.barousel.min.js
+Furthermore use this TypoScript:
+plugin.tx_karussell_pi1.fimila = class="default"| |
+plugin.tx_karussell_pi1.templateFile = EXT:karussell/examples/template_barousel.html
+plugin.tx_karussell_pi1.styleFile = EXT:karussell/examples/style_barousel.css
+plugin.tx_karussell_pi1.images.maxHthumb = 68
+</p>
+
+<!-- ###TEMPLATE_GLOBAL#### begin -->
+<script type="text/javascript">
+/*<![CDATA[*/
+  jQuery(document).ready(function() {	
+	$('#barousel_thslide').barousel({
+//		navWrapper: '#thslide_barousel_nav .thslide_list',
+		manualCarousel: 0,
+		navType: 2
+	});
+//	$('#thslide_barousel_nav').thslide({
+//		itemOffset: 93
+//	});
+  });
+/*]]>*/
+</script>
+
+<div id="barousel_thslide" class="barousel">
+    <div class="barousel_image">
+		###ITEMS###
+    </div>
+    <div class="barousel_content">
+		###ITEMS2###
+    </div>
+    <div class="barousel_nav">
+    </div>
+</div>
+
+<!--  div id="thslide_barousel_nav" class="thslide">
+    <div class="thslide_nav_previous">
+        <a href="#"> </a>
+    </div>
+    <div class="thslide_list">
+        <ul>
+            ###CONTROL###
+        </ul>
+    </div>
+    <div class="thslide_nav_next">
+        <a href="#"> </a>
+    </div>
+</div -->
+ <!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+<!-- ###TEMPLATE_ITEM#### begin -->
+	<!-- image ###NR### -->
+	<img src="###IMAGE###" alt="###TITLE###" title="###TITLE###" ###FIMILA### />
+<!-- ###TEMPLATE_ITEM#### end -->
+
+<!-- ###TEMPLATE_ITEM2#### begin -->
+	<!-- content ###NR### -->
+	<div ###FIMILA###>
+		<p class="header">###TITLE###</p>
+		<p>###CONTENT### <strong>###LINKTAG###</strong></p>
+	</div>
+<!-- ###TEMPLATE_ITEM2#### end -->
+
+<!-- ###TEMPLATE_CONTROL#### begin -->
+	<li><a href="#">###IMAGETAG###<span></span></a></li>
+<!-- ###TEMPLATE_CONTROL#### end -->
+
+</body>
+</html>

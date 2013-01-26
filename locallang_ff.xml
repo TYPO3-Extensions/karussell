@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <type>module</type>
+        <description>Flexform language labels for extension 'karussell'</description>
+    </meta>
+    <data type="array">
+    <languageKey index="default" type="array">
+      <label index="flexform.sheets.general.title">General</label>
+      <label index="flexform.sheets.general.templateFile">Template file:</label>
+      <label index="flexform.sheets.general.styleFile">CSS file:</label>
+      <label index="flexform.sheets.general.jsFile">JavaScript file:</label>
+      <label index="flexform.sheets.general.table">Table name (e.g. tt_news):</label>
+      <label index="flexform.sheets.general.searchFieldList">Search field list (e.g. title,short,image,links):</label>
+      <label index="flexform.sheets.general.andWhere">Where-statement (e.g. AND sys_language_uid=###LANG_UID###):</label>
+      <label index="flexform.sheets.general.sort">Sort by (e.g. datetime:DESC):</label>
+      <label index="flexform.sheets.general.foreignSelect">Select at an foreign table:</label>
+      <label index="flexform.sheets.general.parameterUID">Parameter for the UID (e.g. tx_ttnews[tt_news]):</label>
+      <label index="flexform.sheets.general.destinationPID">Destination of links:</label>
+      <label index="flexform.sheets.general.results_at_a_time">No. of total elements to show:</label>
+      <label index="flexform.sheets.general.crop">Crop the content after max. ... chars:</label>
+      <label index="flexform.sheets.general.linkText">Text for the link-tag:</label>
+      <label index="flexform.sheets.general.disableControl">Disable control-elements (e.g. thumbnails):</label>
+      <label index="flexform.sheets.images.title">Images</label>
+      <label index="flexform.sheets.images.dirName">Directory name in the "uploads" folder:</label>
+      <label index="flexform.sheets.images.maxW">Max. width:</label>
+      <label index="flexform.sheets.images.maxH">Max. height:</label>
+      <label index="flexform.sheets.images.maxWthumb">Max. width (thumbnails):</label>
+      <label index="flexform.sheets.images.maxHthumb">Max. height (thumbnails):</label>
+      <label index="flexform.sheets.images.setTitle">Set the title as ALT-attribute?</label>
+      <label index="flexform.sheets.images.checkDefaultLang">Check the default language?</label>
+      <label index="flexform.sheets.images.langField">Where is the UID of the default language?</label>
+      <label index="flexform.sheets.jcarousel.title">JS-plugin (e.g. jCarousel) settings</label>
+      <label index="flexform.sheets.jcarousel.wrap">Specifies whether to wrap at the first/last item ...</label>
+      <label index="flexform.sheets.jcarousel.auto">Automatic scroll after ... seconds</label>
+      <label index="flexform.sheets.jcarousel.animation">Animaton speed ('slow', 'fast' or a number between 100 and 900)</label>
+      <label index="flexform.sheets.jcarousel.easing">Easing effect</label>
+      <label index="flexform.sheets.jcarousel.easing.none">-</label>
+      <label index="flexform.sheets.jcarousel.start">Start with element no.</label>
+      <label index="flexform.sheets.jcarousel.scroll">No. of elements to scroll</label>
+      <label index="flexform.sheets.jcarousel.visible">No. of visible elements (null or a number)</label>
+      <label index="flexform.sheets.jcarousel.vertical">Vertical layout?</label>
+      <label index="flexform.sheets.jcarousel.dynamic">Dynamic elements?</label>
+      <label index="flexform.sheets.jcarousel.rtl">Right to left?</label>
+      <label index="flexform.sheets.jcarousel.false">false</label>
+      <label index="flexform.sheets.jcarousel.true">true</label>
+      <label index="flexform.no">no</label>
+      <label index="flexform.yes">yes</label>
+    </languageKey>
+    <languageKey index="de" type="array">
+      <label index="flexform.sheets.general.title">Allgemeines</label>
+      <label index="flexform.sheets.general.templateFile">Template-Datei:</label>
+      <label index="flexform.sheets.general.styleFile">CSS-Datei:</label>
+      <label index="flexform.sheets.general.jsFile">JavaScript-Datei:</label>
+      <label index="flexform.sheets.general.table">Name der Tabelle (z.B. tt_news):</label>
+      <label index="flexform.sheets.general.searchFieldList">Suchfeld-Liste (z.B.: title,short,image,links):</label>
+      <label index="flexform.sheets.general.andWhere">Where-Statement (z.B. AND sys_language_uid=###LANG_UID###):</label>
+      <label index="flexform.sheets.general.sort">Sortieren nach (z.B. datetime:DESC):</label>
+      <label index="flexform.sheets.general.foreignSelect">Select aus einer Zusatztabelle:</label>
+      <label index="flexform.sheets.general.parameterUID">Parameter für die UID (z.B. tx_ttnews[tt_news]):</label>
+      <label index="flexform.sheets.general.destinationPID">Zielseite der Links:</label>
+      <label index="flexform.sheets.general.results_at_a_time">Max. Anzahl der zu zeigenden Elemente:</label>
+      <label index="flexform.sheets.general.crop">Schneide den Inhalt nach maximal ... Zeichen ab:</label>
+      <label index="flexform.sheets.general.linkText">Text für das a-href-Tag:</label>
+      <label index="flexform.sheets.general.disableControl">Control-Elemente (z.B. Thumbnails) abschalten:</label>
+      <label index="flexform.sheets.images.title">Bilder</label>
+      <label index="flexform.sheets.images.dirName">Verzeichnis-Namen in dem Ordner "uploads":</label>
+      <label index="flexform.sheets.images.maxW">Max. Breite:</label>
+      <label index="flexform.sheets.images.maxH">Max. Höhe:</label>
+      <label index="flexform.sheets.images.maxWthumb">Max. Breite der Thumbnails:</label>
+      <label index="flexform.sheets.images.maxHthumb">Max. Höhe der Thumbnails:</label>
+      <label index="flexform.sheets.images.setTitle">Den Titel als ALT verwenden?</label>
+      <label index="flexform.sheets.images.checkDefaultLang">Hole notfalls das Bild von der Standardsprache?</label>
+      <label index="flexform.sheets.images.langField">Wo steht die UID der Standardsprache?</label>
+      <label index="flexform.sheets.jcarousel.title">JS-Plugin (z.B. jCarousel) Einstellungen</label>
+      <label index="flexform.sheets.jcarousel.wrap">Gibt an, was beim ersten/letzten Element passieren soll ...</label>
+      <label index="flexform.sheets.jcarousel.auto">Automatisch nach ... Sekunden scrollen</label>
+      <label index="flexform.sheets.jcarousel.animation">Animatons-Geschwindigkeit ('slow', 'fast' oder 100 bis 900)</label>
+      <label index="flexform.sheets.jcarousel.easing">Easing-Effekt</label>
+      <label index="flexform.sheets.jcarousel.easing.none">-</label>
+      <label index="flexform.sheets.jcarousel.start">Starten mit Element Nummer</label>
+      <label index="flexform.sheets.jcarousel.scroll">Anzahl der zu skrollenden Elemente</label>
+      <label index="flexform.sheets.jcarousel.visible">Anzahl sichtbarer Elemente (null oder eine Zahl)</label>
+      <label index="flexform.sheets.jcarousel.vertical">Vertikales Layout?</label>
+      <label index="flexform.sheets.jcarousel.dynamic">Dynamische Elemente?</label>
+      <label index="flexform.sheets.jcarousel.rtl">Rechts nach links?</label>
+      <label index="flexform.sheets.jcarousel.false">nein</label>
+      <label index="flexform.sheets.jcarousel.true">ja</label>
+      <label index="flexform.no">nein</label>
+      <label index="flexform.yes">ja</label>
+    </languageKey>
+    <languageKey index="fr" type="array">
+      <label index="flexform.sheets.general.title">Général</label>
+      <label index="flexform.sheets.general.templateFile">Fichier de modèle</label>
+      <label index="flexform.sheets.general.styleFile">Fichier de CSS:</label>
+      <label index="flexform.sheets.general.jsFile">Fichier de JavaScript:</label>
+      <label index="flexform.sheets.general.table">Nom de la table (par exemple: tt_news):</label>
+      <label index="flexform.sheets.general.searchFieldList">Liste des champs de recherche (par exemple: title,short,image,links):</label>
+      <label index="flexform.sheets.general.andWhere">Where déclaration (par example: AND sys_language_uid=###LANG_UID###):</label>
+      <label index="flexform.sheets.general.sort">Trier par (par exemple: datetime:DESC):</label>
+      <label index="flexform.sheets.general.foreignSelect">Sélectionnez une table à l'étranger:</label>
+      <label index="flexform.sheets.general.parameterUID">Paramètre pour l'UID (par exemple: tx_ttnews[tt_news]):</label>
+      <label index="flexform.sheets.general.destinationPID">Destination des liens:</label>
+      <label index="flexform.sheets.general.results_at_a_time">Résultats à un moment:</label>
+      <label index="flexform.sheets.general.crop">Recadrer le contenu après ... caractères:</label>
+      <label index="flexform.sheets.general.linkText">Texte du lien-tag:</label>
+      <label index="flexform.sheets.general.disableControl">Désactiver le contrôle-éléments (par exemple les vignettes):</label>
+      <label index="flexform.sheets.images.title">Images</label>
+      <label index="flexform.sheets.images.dirName">Le nom du répertoire dans le dossier "uploads":</label>
+      <label index="flexform.sheets.images.maxW">Largeur maximale:</label>
+      <label index="flexform.sheets.images.maxH">Hauteur maximale:</label>
+      <label index="flexform.sheets.images.maxWthumb">Largeur maximale (les vignettes):</label>
+      <label index="flexform.sheets.images.maxHthumb">Hauteur maximale (les vignettes):</label>
+      <label index="flexform.sheets.images.setTitle">Définir le titre que ALT?</label>
+      <label index="flexform.sheets.images.checkDefaultLang">Vérifiez la langue par défaut?</label>
+      <label index="flexform.sheets.images.langField">Où est l'UID de la langue par défaut?</label>
+      <label index="flexform.sheets.jcarousel.title">Paramètres jCarousel</label>
+      <label index="flexform.sheets.jcarousel.wrap">Indique si pour envelopper au premier / dernier élément ...</label>
+      <label index="flexform.sheets.jcarousel.auto">Défilement automatique après ... seconde</label>
+      <label index="flexform.sheets.jcarousel.animation">Animaton vitesse ("slow", "fast" ou un nombre compris entre 100 et 900)</label>
+      <label index="flexform.sheets.jcarousel.easing">Faciliter l'effet</label>
+      <label index="flexform.sheets.jcarousel.easing.none">-</label>
+      <label index="flexform.sheets.jcarousel.start">Commencez par aucun élément de.</label>
+      <label index="flexform.sheets.jcarousel.scroll">Nombre d'éléments pour faire défiler</label>
+      <label index="flexform.sheets.jcarousel.visible">Nombre d'éléments visibles (null ou un numéro)</label>
+      <label index="flexform.sheets.jcarousel.vertical">Présentation verticale?</label>
+      <label index="flexform.sheets.jcarousel.dynamic">Èléments dynamiques?</label>
+      <label index="flexform.sheets.jcarousel.rtl">De droite à gauche?</label>
+      <label index="flexform.sheets.jcarousel.false">faux</label>
+      <label index="flexform.sheets.jcarousel.true">vrai</label>
+      <label index="flexform.no">aucun</label>
+      <label index="flexform.yes">oui</label>
+    </languageKey>
+	<languageKey index="dk" type="array">
+	</languageKey>
+	<languageKey index="no" type="array">
+	</languageKey>
+	<languageKey index="it" type="array">
+      <label index="flexform.sheets.general.title">Generale</label>
+      <label index="flexform.sheets.general.templateFile">File di modello:</label>
+      <label index="flexform.sheets.general.styleFile">File di CSS:</label>
+      <label index="flexform.sheets.general.jsFile">File de JavaScript:</label>
+      <label index="flexform.sheets.general.table">Tabella nome (ad esempio: tt_news):</label>
+      <label index="flexform.sheets.general.searchFieldList">Elenco dei campi di ricerca (ad esempio: title,short,image,links):</label>
+      <label index="flexform.sheets.general.andWhere">Where dichiarazione (ad esempio: AND sys_language_uid=###LANG_UID###):</label>
+      <label index="flexform.sheets.general.sort">Ordina per (ad esempio: datetime:DESC):</label>
+      <label index="flexform.sheets.general.foreignSelect">Selezionate in una tabella esterna:</label>
+      <label index="flexform.sheets.general.parameterUID">Parametro per l'UID (ad esempio: tx_ttnews[tt_news]):</label>
+      <label index="flexform.sheets.general.destinationPID">Destinazione dei collegamenti:</label>
+      <label index="flexform.sheets.general.results_at_a_time">I risultati alla volta:</label>
+      <label index="flexform.sheets.general.crop">Ritagliare il contenuto dopo ... caratteri:</label>
+      <label index="flexform.sheets.general.linkText">Testo per il link-tag:</label>
+      <label index="flexform.sheets.general.disableControl">Disabilitare il controllo-elementi (ad es miniature):</label>
+      <label index="flexform.sheets.images.title">Immagini</label>
+      <label index="flexform.sheets.images.dirName">Nome della directory nella cartella di "uploads":</label>
+      <label index="flexform.sheets.images.maxW">Larghezza massima:</label>
+      <label index="flexform.sheets.images.maxH">Altezza massima:</label>
+      <label index="flexform.sheets.images.maxWthumb">Larghezza massima (es miniature):</label>
+      <label index="flexform.sheets.images.maxHthumb">Altezza massima (es miniature):</label>
+      <label index="flexform.sheets.images.setTitle">Impostare il titolo come ALT?</label>
+      <label index="flexform.sheets.images.checkDefaultLang">Verificare la lingua di default?</label>
+      <label index="flexform.sheets.images.langField">Dove si trova l'UID della lingua di default?</label>
+      <label index="flexform.sheets.jcarousel.title">Impostazioni jCarousel</label>
+      <label index="flexform.sheets.jcarousel.wrap">Specifica se a capo dopo la prima / ultima voce ...</label>
+      <label index="flexform.sheets.jcarousel.auto">Scorrimento automatico dopo ... secondo</label>
+      <label index="flexform.sheets.jcarousel.animation">Animaton velocità ('slow', 'fast' o un numero compreso tra 100 e 900)</label>
+      <label index="flexform.sheets.jcarousel.easing">Facilitare effetto</label>
+      <label index="flexform.sheets.jcarousel.easing.none">-</label>
+      <label index="flexform.sheets.jcarousel.start">Inizia con l'elemento no.</label>
+      <label index="flexform.sheets.jcarousel.scroll">Numero di elementi per scorrere</label>
+      <label index="flexform.sheets.jcarousel.visible">Numero di elementi visibili (null o un numero)</label>
+      <label index="flexform.sheets.jcarousel.vertical">Presentazione verticale?</label>
+      <label index="flexform.sheets.jcarousel.dynamic">Dynamic elementi?</label>
+      <label index="flexform.sheets.jcarousel.rtl">Da destra a sinistra?</label>
+      <label index="flexform.sheets.jcarousel.false">falso</label>
+      <label index="flexform.sheets.jcarousel.true">vero</label>
+      <label index="flexform.no">no</label>
+      <label index="flexform.yes">sí</label>
+	</languageKey>
+	<languageKey index="es" type="array">
+      <label index="flexform.sheets.general.title">General</label>
+      <label index="flexform.sheets.general.templateFile">Plantilla de archivo:</label>
+      <label index="flexform.sheets.general.styleFile">Plantilla de CSS:</label>
+      <label index="flexform.sheets.general.jsFile">Plantilla de JavaScript:</label>
+      <label index="flexform.sheets.general.table">Nombre de la tabla (por ejemplo: tt_news):</label>
+      <label index="flexform.sheets.general.searchFieldList">Lista de campos de búsqueda (por ejemplo: title,short,image,links):</label>
+      <label index="flexform.sheets.general.andWhere">Where declaración (por ejemplo: AND sys_language_uid=###LANG_UID###):</label>
+      <label index="flexform.sheets.general.sort">Ordenar por (por ejemplo: datetime:DESC):</label>
+      <label index="flexform.sheets.general.foreignSelect">Seleccionar a una tabla externa:</label>
+      <label index="flexform.sheets.general.parameterUID">Parámetro para la UID (por ejemplo: tx_ttnews[tt_news]):</label>
+      <label index="flexform.sheets.general.destinationPID">Destino de los enlaces:</label>
+      <label index="flexform.sheets.general.results_at_a_time">Los resultados a la vez:</label>
+      <label index="flexform.sheets.general.crop">Recortar el contenido después de ... caracteres:</label>
+      <label index="flexform.sheets.general.linkText">El texto para el enlace de etiquetas::</label>
+      <label index="flexform.sheets.general.disableControl">Desactivar el control de los elementos (por ejemplo, imágenes en miniatura):</label>
+      <label index="flexform.sheets.images.title">Imágenes</label>
+      <label index="flexform.sheets.images.dirName">Nombre de directorio en la carpeta "uploads":</label>
+      <label index="flexform.sheets.images.maxW">Ancho máximo:</label>
+      <label index="flexform.sheets.images.maxH">Altura máxima:</label>
+      <label index="flexform.sheets.images.maxWthumb">Ancho máximo (imágenes en miniatura):</label>
+      <label index="flexform.sheets.images.maxHthumb">Altura máxima (imágenes en miniatura):</label>
+      <label index="flexform.sheets.images.setTitle">Establecer el título como ALT?</label>
+      <label index="flexform.sheets.images.checkDefaultLang">Compruebe el idioma por defecto?</label>
+      <label index="flexform.sheets.images.langField">¿Dónde está el UID de la lengua por defecto?</label>
+      <label index="flexform.sheets.jcarousel.title">Ajustes jCarousel</label>
+      <label index="flexform.sheets.jcarousel.wrap">Especifica si se envuelven en el primer / último tema ...</label>
+      <label index="flexform.sheets.jcarousel.auto">Automática de desplazamiento después de ... segundo</label>
+      <label index="flexform.sheets.jcarousel.animation">Velocidad Animaton ('slow', 'fast' o un número entre 100 y 900)</label>
+      <label index="flexform.sheets.jcarousel.easing">Facilitar el efecto</label>
+      <label index="flexform.sheets.jcarousel.easing.none">-</label>
+      <label index="flexform.sheets.jcarousel.start">Comience con ningún elemento.</label>
+      <label index="flexform.sheets.jcarousel.scroll">Número de elementos para desplazarse</label>
+      <label index="flexform.sheets.jcarousel.visible">Número de elementos visibles (null o un número)</label>
+      <label index="flexform.sheets.jcarousel.vertical">Vertical diseño?</label>
+      <label index="flexform.sheets.jcarousel.dynamic">Dinámica de los elementos?</label>
+      <label index="flexform.sheets.jcarousel.rtl">Derecha a izquierda?</label>
+      <label index="flexform.sheets.jcarousel.false">falso</label>
+      <label index="flexform.sheets.jcarousel.true">verdadero</label>
+      <label index="flexform.no">no</label>
+      <label index="flexform.yes">sí</label>
+	</languageKey>
+	<languageKey index="nl" type="array">
+	</languageKey>
+	<languageKey index="cz" type="array">
+	</languageKey>
+	<languageKey index="pl" type="array">
+	</languageKey>
+	<languageKey index="si" type="array">
+	</languageKey>
+	<languageKey index="fi" type="array">
+	</languageKey>
+	<languageKey index="tr" type="array">
+	</languageKey>
+	<languageKey index="se" type="array">
+	</languageKey>
+	<languageKey index="pt" type="array">
+	</languageKey>
+	<languageKey index="ru" type="array">
+	</languageKey>
+	<languageKey index="ro" type="array">
+      <label index="flexform.sheets.general.title">General</label>
+      <label index="flexform.sheets.general.templateFile">Format fişier:</label>
+      <label index="flexform.sheets.general.styleFile">Format CSS:</label>
+      <label index="flexform.sheets.general.jsFile">Format JavaScript:</label>
+      <label index="flexform.sheets.general.table">Tabelul nume (de exemplu: tt_news):</label>
+      <label index="flexform.sheets.general.searchFieldList">Domeniul lista de căutare (de exemplu: title,short,image,links):</label>
+      <label index="flexform.sheets.general.andWhere">Where declaraţie (de exemplu: AND sys_language_uid=###LANG_UID###):</label>
+      <label index="flexform.sheets.general.sort">Sortare după (de exemplu: datetime:DESC):</label>
+      <label index="flexform.sheets.general.foreignSelect">Selectaţi la o masă străină:</label>
+      <label index="flexform.sheets.general.parameterUID">Parametru pentru UID (de exemplu: tx_ttnews[tt_news]):</label>
+      <label index="flexform.sheets.general.destinationPID">Destinaţie de link-uri:</label>
+      <label index="flexform.sheets.general.results_at_a_time">Rezultate la un moment dat:</label>
+      <label index="flexform.sheets.general.crop">Decuparea de conţinut, după ... caractere:</label>
+      <label index="flexform.sheets.general.linkText">Text pentru link-ul tag-ul:</label>
+      <label index="flexform.sheets.general.disableControl">Dezactivează control-elemente (de exemplu, miniaturi):</label>
+      <label index="flexform.sheets.images.title">Imagini</label>
+      <label index="flexform.sheets.images.dirName">Nume de director în folderul "uploads":</label>
+      <label index="flexform.sheets.images.maxW">Lăţime maximă:</label>
+      <label index="flexform.sheets.images.maxH">Înălţimea maximă:</label>
+      <label index="flexform.sheets.images.maxWthumb">Lăţime maximă (miniaturi):</label>
+      <label index="flexform.sheets.images.maxHthumb">Înălţimea maximă (miniaturi):</label>
+      <label index="flexform.sheets.images.setTitle">Setaţi titlu ca ALT?</label>
+      <label index="flexform.sheets.images.checkDefaultLang">Verificaţi limba implicit?</label>
+      <label index="flexform.sheets.images.langField">În cazul în care este UID de limba maternă?</label>
+      <label index="flexform.sheets.jcarousel.title">Setările jCarousel</label>
+      <label index="flexform.sheets.jcarousel.wrap">Specifică dacă să-şi încheie la primul / ultimul element ...</label>
+      <label index="flexform.sheets.jcarousel.auto">Parcurgere automata dupa ... secunde</label>
+      <label index="flexform.sheets.jcarousel.animation">Viteza Animaton ("slow", "fast" sau un număr cuprins între 100 şi 900)</label>
+      <label index="flexform.sheets.jcarousel.easing">Diminuarea efectului</label>
+      <label index="flexform.sheets.jcarousel.easing.none">-</label>
+      <label index="flexform.sheets.jcarousel.start">Începeţi cu element nr.</label>
+      <label index="flexform.sheets.jcarousel.scroll">Nr de elemente pentru a defila</label>
+      <label index="flexform.sheets.jcarousel.visible">Nr de elemente vizibile (null sau un număr)</label>
+      <label index="flexform.sheets.jcarousel.vertical">Structura verticală?</label>
+      <label index="flexform.sheets.jcarousel.dynamic">Elemente dinamice?</label>
+      <label index="flexform.sheets.jcarousel.rtl">La dreapta la stânga?</label>
+      <label index="flexform.sheets.jcarousel.false">fals</label>
+      <label index="flexform.sheets.jcarousel.true">adevărat</label>
+      <label index="flexform.no">nu</label>
+      <label index="flexform.yes">da</label>
+	</languageKey>
+    </data>
+</T3locallang>

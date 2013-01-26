@@ -1,0 +1,71 @@
+<html>
+<body>
+<p>Background Karussell-Template</p>
+<p>"bgStretcher 2011 (Background Stretcher) is a jQuery plug-in" from here:
+http://www.ajaxblender.com/bgstretcher-2-jquery-stretch-background-plugin-updated.html
+Copy the JavaScript and CSS from there to your fileadmin-folder!!!
+Test it with:</p>
+<pre>
+plugin.tx_karussell_pi1.templateFile = EXT:karussell/examples/template_bgstretcher.html
+plugin.tx_karussell_pi1.styleFile = fileadmin/template/styles/bgstretcher.css
+plugin.tx_karussell_pi1.jsFile = fileadmin/template/files/bgstretcher.js
+</pre>
+
+
+<!-- ###TEMPLATE_GLOBAL#### begin -->
+<script type="text/javascript">
+	var currentItem=###START###;
+	var maxItems=###MAX###;
+	$(document).ready(function(){
+        //  Initialize Backgound Stretcher	   
+		$('BODY').bgStretcher({
+			images: [###ITEMS###],
+			imageWidth: 1680, 
+			imageHeight: 1050, 
+			slideDirection: 'N',
+			slideShowSpeed: 500,
+			transitionEffect: 'fade',
+			sequenceMode: 'normal',
+			buttonPrev: '#prev',
+			buttonNext: '#next',
+			anchoring: 'left center',
+			anchoringImg: 'left center',
+			nextSlideDelay: 9999999,
+			slideShow: false
+		});
+		$('#fgelem').text( $('#bgelem'+currentItem).html() );
+	});
+	function gotobg(direction) {
+		if (direction==1)
+			currentItem++;
+		else
+			currentItem--;
+		if (currentItem < 1)
+			currentItem=maxItems;
+		else if (currentItem > maxItems)
+			currentItem=1;	
+		$('#fgelem').text( $('#bgelem'+currentItem).html() );
+	}	
+</script>
+<div id="bgslider">
+  <div class="nav-buttons">
+	<a href="javascript:gotobg(-1);" id="prev">Previouse image</a>&nbsp;&nbsp;&nbsp;
+	<a href="javascript:gotobg(1);" id="next">Next image</a>
+  </div>
+  <div id="fgelem">&nbsp;</div>
+</div>
+
+###ITEMS2###
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+<!-- ###TEMPLATE_ITEM#### begin -->'###IMAGE###'###FIMILA###<!-- ###TEMPLATE_ITEM#### end -->
+
+<!-- ###TEMPLATE_ITEM2#### begin -->
+<div class="hidden" id="bgelem###NR###">
+	###CONTENT###
+</div>
+<!-- ###TEMPLATE_ITEM2#### end -->
+
+</body>
+</html>

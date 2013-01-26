@@ -1,0 +1,34 @@
+<html>
+<body>
+<p>Innerfade-Template, based on Innerfade from http://medienfreunde.com/lab/innerfade/</p>
+<p>Test it with this TypoScript:</p>
+<pre>
+plugin.tx_karussell_pi1 {
+  templateFile = EXT:karussell/examples/template_innerfade.html
+  styleFile = EXT:karussell/examples/style_innerfade.css
+  jsFile = EXT:karussell/examples/javascript_innerfade.js
+}
+</pre>
+<p>Note: customise the JS (at the bottom of ths javascript-file) and CSS-file too!!!!!!!!!</p>
+
+<!-- ###TEMPLATE_GLOBAL#### begin -->
+<ul id="innerfade">
+  ###ITEMS###
+</ul>
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+<!-- ###TEMPLATE_ITEM#### begin -->
+<li>
+	<div style="background: url(###IMAGE###) no-repeat;" class="innerhinter">
+		<div class="innervorder">
+			<h2>###TITLE###</h2>
+			<p>###CONTENT###</p>
+		</div>
+	</div>
+</li>
+<!-- ###TEMPLATE_ITEM#### end -->
+
+
+</body>
+</html>

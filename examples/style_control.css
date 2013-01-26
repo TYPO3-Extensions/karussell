@@ -1,0 +1,139 @@
+#vorJ {
+	position: relative;
+	clear: both;
+}
+#vorJ ul {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+#mycarousel {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	clear: both;
+}
+#mycarousel,
+#mycarousel li {
+	list-style: none !important;
+	list-style-image: none !important;
+    width: 583px;
+    height: 330px;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+}
+
+#mycarousel .jcarousel-container {
+    width: 583px;
+    height: 330px;
+	padding: 0;
+	margin: 0;
+}
+
+#mycarousel .jcarousel-container-horizontal {
+    width: 583px;
+    height: 330px;
+	padding: 0;
+	margin: 0;
+}
+
+#mycarousel .jcarousel-clip-horizontal {
+    width:  583px;
+    height: 330px;
+	padding: 0;
+	margin: 0;
+}
+
+#mycarousel .jcarousel-item {
+    width: 583px;
+    height: 330px;
+	padding: 0;
+	margin: 0;
+}
+
+
+/**
+ *  Horizontal Buttons
+ */
+#mycarousel .jcarousel-next-horizontal {
+    position: absolute;
+	display: none;
+}
+
+#mycarousel .jcarousel-prev-horizontal {
+    position: absolute;
+	display: none;
+}
+
+
+/**
+ *  Rest
+ */
+.jcarousel-control {
+	position: absolute;
+	top: 145px;
+	left: 461px;
+	padding: 0 !important;
+	margin: 0 !important;
+	z-index: 10;
+	height: 30px;
+}
+
+.jcarousel-control div {
+	float: left;
+	text-align: center;
+    margin: 0 0 0 2px;
+	padding: 0;
+	width: 16px;
+	height: 22px;
+	padding: 4px;
+	background-color: #e7e1d8;
+/*	filter:alpha(opacity=80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;*/
+}
+.jcarousel-control div a {
+    font-size: 120%;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.jcarousel-control a:focus,
+.jcarousel-control a:active {
+    outline: none;
+}
+
+.hinter{
+	width: 583px;
+	height: 185px;
+	padding: 145px 0 0 0;
+}
+.vorder{
+	margin: 0;
+	width: 583px;
+	height: 185px;
+}
+.vorder h2 {
+	width: 410px;
+	height: 22px;
+	background: #fff;
+	font-weight: bold;
+	margin: 0 0 10px 17px !important;
+	padding: 4px 15px !important;
+	border: dotted #000000 2px;
+	filter:alpha(opacity=93);
+	-moz-opacity: 0.93;
+	opacity: 0.93;
+}
+
+.vorder p {
+	margin: 0 0 10px 17px !important;
+	padding: 4px 15px !important;
+	background: #fff;
+	filter:alpha(opacity=93);
+	-moz-opacity: 0.93;
+	opacity: 0.93;
+}

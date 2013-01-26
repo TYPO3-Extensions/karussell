@@ -1,0 +1,37 @@
+<html>
+<body>
+<p>Very simple Karussell-Template</p>
+
+
+Also avaiable here: ###UID###, ###MAX###.
+<!-- ###TEMPLATE_GLOBAL#### begin -->
+<script type="text/javascript">
+jQuery(document).ready(function() {
+   jQuery('#mycarousel').jcarousel({
+      wrap: ###WRAP###,
+      visible: ###VISIBLE###,
+      auto: ###AUTO###,
+      animation: ###ANIMATION###,
+      easing: ###EASING###,
+      scroll: ###SCROLL###,
+      start: ###START###,
+      vertical: ###VERTICAL###,
+      rtl: ###RTL###
+   });
+});
+</script>
+
+<ul id="mycarousel" class="jcarousel-skin-ie7">
+###ITEMS###
+</ul>
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+The following markers are here avaiable: TITLE, CONTENT, IMAGE, IMAGETAG, LINK, LINKTAG, NR, UID and IS_START.
+Furthermore: LOCAL_field and FOREIGN_field
+<!-- ###TEMPLATE_ITEM#### begin -->
+<li class="jcarousel-item jcarousel-item-horizontal"><a href="###LINK###">###IMAGETAG###</a></li>
+<!-- ###TEMPLATE_ITEM#### end -->
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+ul#innerfade {
+  width: 948px;
+  height: 324px;
+  list-style-image:none;
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+ 
+ul#innerfade li {
+  display:block;
+  margin:0;
+  padding:0;
+}
+
+
+/**
+ *  Rest
+ */
+.innerhinter{
+	width: 948px;
+	height: 324px;
+	position: relative;
+}
+.innervorder{
+	position: absolute;
+	top: 100px;
+	left: 0;
+	width: 333px;
+	height: 120px;
+	margin: 0;
+	padding: 0;
+	background: #009ee0;
+	text-align: left;
+	filter:alpha(opacity=92);
+	-moz-opacity: 0.92;
+	opacity: 0.92;
+}
+.innervorder h2 {
+	color: #fff;
+	font-size: 250%;
+	padding: 10px 5px 5px 20px;
+	margin: 0;
+}
+.innervorder p {
+	color: #fff;
+	font-size: 160%;
+	padding: 0 5px 0 50px;
+}

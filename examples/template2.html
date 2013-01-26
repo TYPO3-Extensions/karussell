@@ -1,0 +1,92 @@
+<html>
+<body>
+<p>Dynamic Karussell-Template. You must enable the dynamic elements!</p>
+
+<!-- ###TEMPLATE_GLOBAL#### end -->
+<script type="text/javascript">
+/*<![CDATA[*/
+var zaehler = 0;
+var mycarousel_itemList = [
+###ITEMS###
+];
+function zufallszahl() {
+	min = 1;
+	max = ###MAX###;
+	return (min + parseInt( Math.random() * ( max-min+1 ) ));
+}
+function mycarousel_itemVisibleInCallback(carousel, item, i, state, evt)
+{
+    // The index() method calculates the index from a
+    // given index who is out of the actual item range.
+	if (zaehler<3) zaehler++;
+    var idx = carousel.index(i, mycarousel_itemList.length);
+    carousel.add(i, mycarousel_getItemHTML(mycarousel_itemList[idx - 1]));
+	if ((state=='init' && zaehler==2) || state=='next' || state=='prev') {
+	  idx = carousel.index(i+1, mycarousel_itemList.length);
+	  carousel.add(i+1, mycarousel_getItemHTML(mycarousel_itemList[idx - 1]));
+	} else if (state=='init' && zaehler==1) {
+	  carousel.startAuto();	// erster start
+	}
+};
+
+function mycarousel_itemVisibleOutCallback(carousel, item, i, state, evt)
+{
+	if (state=='next')
+		carousel.remove(i);
+	else
+		carousel.remove(i+1);
+	carousel.startAuto();	// wieder anschmeissen nach animation
+};
+
+/**
+ * Item html creation helper. Available: nr,title,content,link,linkTag,image and imageTag.
+ */
+function mycarousel_getItemHTML(item){
+	return '<div><h2>' + item.nr + ': ' + item.title + '</h2>' + item.imageTag + '<p><a href="' + item.link + '" target="extern">' + item.content + '</a></p></div>';
+};
+
+function initCallbackFunction(carousel, state) {
+    carousel.remove(1);	// dummy entfernen
+	
+	// Disable autoscrolling if the user clicks the prev or next button.
+    carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });
+	
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        wrap: 'circular',
+		auto: ###AUTO###,
+		animation: ###ANIMATION###,
+		easing: ###EASING###,
+		scroll: ###SCROLL###,
+		start: zufallszahl(),
+		vertical: ###VERTICAL###,
+		initCallback: initCallbackFunction,
+        itemVisibleInCallback: {onBeforeAnimation: mycarousel_itemVisibleInCallback},
+        itemVisibleOutCallback: {onAfterAnimation: mycarousel_itemVisibleOutCallback}
+    });
+});
+/*]]>*/
+</script>
+
+<ul id="mycarousel" class="jcarousel-skin-ie7">
+	<li style="display:none;width:0px;height:0px;visibility:hidden;">dummy</li>
+    <!-- The content will be dynamically loaded in here -->
+</ul>
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+</body>
+</html>

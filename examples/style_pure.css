@@ -1,0 +1,74 @@
+.infiniteCarousel {
+  width: 540px;
+  height: 370px;
+  position: relative;
+  margin: 10px 0 0 90px;
+  padding:0;
+  text-align: left; 
+}
+ 
+.infiniteCarousel .wrapper {
+  width: 540px;
+  height: 370px;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  left:0;
+  margin:0;
+  padding:0;
+  text-align: left; 
+}
+ 
+.infiniteCarousel .wrapper ul {
+  width: 9999px;
+  list-style-image:none;
+  list-style-position:outside;
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  position: absolute;
+  top: 0;
+  text-align: left; 
+}
+ 
+.infiniteCarousel ul li {
+  display:block;
+  float:left;
+  margin:0;
+  padding:0;
+  height: 370px;
+  width: 540px;
+}
+ 
+.infiniteCarousel ul li a img {
+  display:block;
+  height: 370px;
+  width: 540px;
+  margin:0;
+  padding:0;
+}
+
+
+/**
+ *  Rest
+ */
+.hinter{
+	width: 440px;
+	height: 120px;
+	padding: 250px 50px 0 50px;
+}
+.vorder{
+	width: 440px;
+	height: 119px;
+	margin: 0;
+	padding: 1px 0 0 0;
+	background: #006B04;
+	text-align: center;
+	filter:alpha(opacity=75);
+	-moz-opacity: 0.75;
+	opacity: 0.75;
+}
+.vorder h2,
+.vorder p {
+	color:#fff;
+}

@@ -1,0 +1,147 @@
+#wrapJ {
+	position:relative;
+	clear: both;
+    width:700px;
+    height:680px;
+}
+#wrapJ ul {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+#mycarousel {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index:5;
+	clear: both;
+}
+#mycarousel,
+#mycarousel li {
+	list-style: none !important;
+	list-style-image: none !important;
+    width:700px;
+    height:570px;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+#mycarousel .jcarousel-container {
+    width:700px;
+    height:570px;
+	padding: 0;
+	margin: 0;
+}
+
+#mycarousel .jcarousel-container-horizontal {
+    width:700px;
+    height:570px;
+	padding: 0;
+	margin: 0;
+}
+
+#mycarousel .jcarousel-clip-horizontal {
+    width: 700px;
+    height:570px;
+	padding: 0;
+	margin: 0;
+}
+
+#mycarousel .jcarousel-item {
+    width:700px;
+    height:570px;
+	padding: 0;
+	margin: 0;
+}
+
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-next-horizontal {
+    position:absolute;
+    top:0;
+    right:0;
+    width:25px;
+    height:25px;
+    cursor:pointer;
+	z-index:11;
+    background: transparent url(next.png) no-repeat 0 0;
+}
+
+.jcarousel-next-horizontal:active {
+    background-position: -50px 0;
+}
+
+.jcarousel-next-disabled-horizontal,
+.jcarousel-next-disabled-horizontal:hover,
+.jcarousel-next-disabled-horizontal:active {
+    cursor: default;
+    background-position: -50px 0;
+}
+
+.jcarousel-prev-horizontal {
+    position:absolute;
+    top:0;
+    left:0;
+    width:25px;
+    height:25px;
+    cursor:pointer;
+	z-index:12;
+    background: transparent url(prev.png) no-repeat 0 0;
+}
+
+.jcarousel-prev-horizontal:active {
+    background-position: -50px 0;
+}
+
+.jcarousel-prev-disabled-horizontal,
+.jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-prev-disabled-horizontal:active {
+    cursor: default;
+    background-position: -50px 0;
+}
+
+/**
+ *  Rest
+ */
+#jcarousel-navigation {
+	background:#ccc;
+	width:700px;
+	height:100px;
+	margin-bottom:10px;
+}
+
+.jcarousel-control {
+	clear:both;
+	margin:0;
+	padding:0;
+	width:700px;
+	height:100px;
+	overflow:auto;
+}
+.jcarousel-control table{
+	margin:0;
+	padding:3px 0;
+	width:100%;
+}
+.jcarousel-control .jzelem  {
+	text-align: center;
+    margin:0;
+	padding:0 5px;
+}
+.jcarousel-control #jz1  {
+	padding:0 5px 0 0 !important;
+	border:none !important;
+}
+.jcarousel-control a {
+    font-size: 110%;
+    font-weight: bold;
+    text-decoration: none;
+    color: #7c7c7c;
+}
+.jcarousel-control a:focus,
+.jcarousel-control a:active {
+    outline: none;
+}

@@ -1,0 +1,56 @@
+<html>
+<body>
+<p>Static default Karussell-Template</p>
+
+
+Also avaiable here: ###UID###, ###MAX###, ###CONTROL###, ###ITEMS2###.
+<!-- ###TEMPLATE_GLOBAL#### begin -->
+<script type="text/javascript">
+function initCallbackFunction(carousel, state) {
+	// Disable autoscrolling if the user clicks the prev or next button.
+    carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });
+	
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+   jQuery('#mycarousel').jcarousel({
+      wrap: ###WRAP###,
+      visible: ###VISIBLE###,
+      auto: ###AUTO###,
+      animation: ###ANIMATION###,
+      easing: ###EASING###,
+      scroll: ###SCROLL###,
+      start: ###START###,
+      vertical: ###VERTICAL###,
+      rtl: ###RTL###,
+      initCallback: initCallbackFunction
+   });
+});
+</script>
+
+<ul id="mycarousel" class="jcarousel-skin-ie7">
+###ITEMS###
+</ul>
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+The following markers are here avaiable: TITLE, CONTENT, IMAGE, IMAGETAG, LINK, LINKTAG, NR, UID and IS_START.
+Furthermore: LOCAL_field and FOREIGN_field
+<!-- ###TEMPLATE_ITEM#### begin -->
+<li class="jcarousel-item jcarousel-item-horizontal"><div><h2>###TITLE###</h2><p>###IMAGETAG###</p><p>###CONTENT###</p><p>###LINKTAG###</p></div></li>
+<!-- ###TEMPLATE_ITEM#### end -->
+
+Also avaiable: ###TEMPLATE_CONTROL####, ###TEMPLATE_ITEM2####.
+</body>
+</html>

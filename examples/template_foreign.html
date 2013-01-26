@@ -1,0 +1,93 @@
+<html>
+<body>
+<p>Static foreign example karussell-Template. Testet with this TS:</p>
+<pre>
+plugin.tx_karussell_pi1 {
+  searchFieldList = nom,1,image,2,personne,saison
+  linkText = Zum Rezept
+  table = tx_mvcooking_recette
+  parameterUID = p_recette
+  destinationPID = 51
+  sort = tstamp:DESC
+  foreignSelect = SELECT nom FROM tx_mvcooking_saison WHERE uid=###LOCAL_SAISON###
+  styleFile = EXT:karussell/examples/style_foreign.css
+  templateFile = EXT:karussell/examples/template_foreign.html
+  
+  images {    
+    dirName = tx_mvcooking
+    maxW = 195
+    maxH =  
+  }
+  
+  listView.results_at_a_time = 4
+  use_stdWrap = 0
+}
+plugin.tx_karussell_pi1.jCarousel {
+  animation = 'fast'
+  dynamic = false
+  vertical = true
+  visible = 1
+  easing = 'easeOutBack'
+  start = 1
+  scroll = 1
+  auto = 7
+}
+</pre>
+
+
+Also avaiable here: ###UID###, ###MAX###.
+<!-- ###TEMPLATE_GLOBAL#### begin -->
+<script type="text/javascript">
+var maxItems = ###MAX###;
+function initCallbackFunction(carousel, state) {
+	// Disable autoscrolling if the user clicks the prev or next button.
+    carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });
+	
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+   jQuery('#mycarousel').jcarousel({
+      wrap: ###WRAP###,
+      visible: ###VISIBLE###,
+      auto: ###AUTO###,
+      animation: ###ANIMATION###,
+      easing: ###EASING###,
+      scroll: ###SCROLL###,
+      start: ###START###,
+      vertical: ###VERTICAL###,
+      rtl: ###RTL###,
+      initCallback: initCallbackFunction
+   });
+});
+</script>
+
+<ul id="mycarousel" class="jcarousel-skin-ie7">
+###ITEMS###
+</ul>
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+The following markers are here avaiable: TITLE, CONTENT, IMAGE, IMAGETAG, LINK, LINKTAG, NR, UID and IS_START.
+<!-- ###TEMPLATE_ITEM#### begin -->
+<li class="jcarousel-item jcarousel-item-horizontal"><div>
+	<p>###IMAGETAG###</p>
+	<p><b>###TITLE###</b><br />
+	Personen: ###LOCAL_PERSONNE###<br />
+	Saison: ###FOREIGN_NOM###</p>
+	<p>###LINKTAG###</p>
+</div></li>
+<!-- ###TEMPLATE_ITEM#### end -->
+
+</body>
+</html>

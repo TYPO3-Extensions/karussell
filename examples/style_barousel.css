@@ -1,0 +1,281 @@
+/*-------------> BAROUSEL */
+.barousel
+{
+    position:relative;
+    margin-bottom:0px;
+    width:700px;
+    height:525px;
+}
+
+.barousel_image
+{
+    position:absolute;
+    z-index:10;
+    width:700px;
+    height:500px;
+}
+
+.barousel_image img
+{
+    position:absolute;
+    display:none;
+}
+
+.barousel_image img.default
+{    
+    display:block;
+}
+
+.barousel_image img.current
+{
+    z-index:10;
+}
+
+.barousel_image img.previous
+{
+    z-index:5;
+}
+
+.barousel_content
+{
+    position:absolute;
+    padding:5px 18px;    
+    z-index:50;
+    background:#333;
+    color:#fff;
+    width:350px;
+    min-height:80px;
+    bottom:36px;
+    left:0px;
+    opacity: 0.5;       /* modern browser */  
+    -moz-opacity: 0.5;  /* older Mozilla browser */  
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE8 in Standard Compliant Mode */  
+    filter:alpha(opacity=50); /* IE5.x -7.0 */  
+}
+
+.barousel_content div
+{
+    display:none;    
+}
+
+.barousel_content div.default
+{
+    display:block;    
+}
+
+.barousel_content p
+{
+    font-size:13px;
+    line-height:17px;   
+}
+
+.barousel_content p.header
+{
+    font-size:20px;
+    line-height:20px;
+}
+
+.barousel_content a,
+.barousel_content a:hover
+{
+    color:#fff55b;
+    background-color:transparent !important;
+}
+
+.barousel_nav
+{
+    position:absolute;
+    padding:0;
+    height:25px;    
+    background:#000;
+    bottom:0;
+    z-index:20;
+    width:540px;
+}
+
+.barousel_nav .counter
+{    
+    float:right;
+    font-size:0.75em;
+    color:#fff;
+    margin:3px 5px 0 0;
+}
+
+.barousel_nav ul
+{
+    float:right;
+    padding:0;
+    margin:0;
+}
+
+.barousel_nav li
+{
+    float:left;
+	padding:0 5px;
+	background-color:#fff;
+    font-size:0;
+    line-height:0;
+    list-style:none;
+}
+
+.barousel_nav li a
+{
+    display:block;
+    width:25px;
+    height:25px;
+    background-color:#fff;
+    font-size:0;
+    line-height:0;
+    text-decoration:none;
+}
+
+.barousel_nav li a:hover
+{
+    background-color:#6e6e6e;
+}
+
+.barousel_nav li a.current
+{
+    background-color:#fff55b;
+}
+
+.barousel_nav li.prev a
+{
+    background-image:url(prev.png);
+    background-repeat:no-repeat;
+    background-position:0 0;
+}
+
+.barousel_nav li.next a
+{
+    background-image:url(next.png);
+    background-repeat:no-repeat;
+    background-position:0 0;
+}
+
+.barousel img.ajax_loader
+{
+    display:none;
+    position:absolute;
+    z-index:99;
+    top:70px;
+    left:135px;
+}
+
+/*-------------> THSLIDE */
+.thslide
+{    
+    background:#000;
+    width:400px;
+    height:68px;
+    border-top:3px solid #000;
+}
+
+.thslide_nav_previous
+{
+    float:left;    
+}
+
+.thslide_nav_next
+{
+    float:right;    
+}
+
+.thslide_nav_previous a,
+.thslide_nav_next a
+{
+    display:block;
+    width:19px;
+    height:68px;     
+    text-decoration:none;  
+    background-color:#4d4d4d;
+    background-repeat:no-repeat;    
+}
+
+.thslide_nav_previous a
+{
+    background-image:url(prev.png);    
+    background-position:0 0;
+}
+
+.thslide_nav_next a
+{
+    background-image:url(next.png);    
+    background-position:100% 0;
+}
+
+.thslide_nav_previous a:hover,
+.thslide_nav_next a:hover
+{
+    background-color:#6e6e6e;
+}
+
+.thslide_list
+{
+    float:left;
+    overflow:hidden;   
+    position:relative; 
+    width:362px;
+    height:68px;    
+}
+
+.thslide_list ul
+{
+    float:left;
+    width:9000px;
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+
+.thslide_list li
+{
+    float:left;
+    margin-right:3px;
+}
+
+.thslide_list li a
+{
+    display:block;
+    position:relative;
+    width:121px;
+    height:68px;    
+    text-decoration:none;
+}
+
+.thslide_list li a img
+{
+    position:absolute;
+}
+
+.thslide_list li a span
+{
+    position:absolute;
+    display:block;
+    width:115px;
+    height:62px;    
+}
+
+.thslide_list li a:hover span,
+.thslide_list li a.current span
+{    
+    border:3px solid #fff55b;
+}
+
+/* Specific implementation 
+#barousel_thslide
+{
+    height:446px;
+}
+
+#barousel_thslide .barousel_content
+{
+    bottom:81px;
+}
+
+#thslide_barousel_nav
+{
+    position:absolute;
+    bottom:0;
+}
+*/

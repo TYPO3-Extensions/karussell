@@ -1,0 +1,120 @@
+<html>
+<body>
+<p>This image carousel needs the JavaScript-plugin from here or include it via t3jquery (recommended):
+http://jquerytools.org/demos/scrollable/index.html
+NOTE: you need exactly n*jCarousel.visible number of content elements!!!
+Test it with this TS:</p>
+<pre>
+plugin.tx_karussell_pi1 {
+  jsFile =
+  styleFile = EXT:karussell/examples/style_scrollable.css
+  templateFile = EXT:karussell/examples/template_scrollable.html
+  images {
+    dirName = pics
+    maxW = 700
+    maxH = 	
+    maxWthumb = 100
+	maxHthumb = 72
+	setTitle = 1
+  }
+  jCarousel {
+	dynamic = true
+	visible = 5
+	visible_wrap_start = <div>
+	visible_wrap_end = </div>
+  }
+}
+</pre>
+
+
+<!-- ###TEMPLATE_GLOBAL#### begin -->
+<h3 id="jtitle_wrap">&nbsp;</h3>
+<div id="jdescription_wrap">&nbsp;</div>
+
+<!-- wrapper element for the large image -->
+<div id="jimage_wrap">
+  <!-- Initially the image is a simple 1x1 pixel transparent GIF -->
+  <img src="/clear.gif" />
+</div>
+
+<div id="jscrollable_wrap">
+<!-- "previous page" action -->
+<a class="prev browse left"></a>
+ 
+<!-- root element for scrollable -->
+<div class="scrollable" id="scrollable">
+  <!-- root element for the items -->
+  <div class="items">
+	###CONTROL###
+  </div>
+</div>
+ 
+<!-- "next page" action -->
+<a class="next browse right"></a>
+</div>
+
+<script type="text/javascript">
+/*<![CDATA[*/
+var zaehler = 0;
+var mycarousel_itemList = [
+###ITEMS###
+];
+
+$(function() {
+  // initialize scrollable
+  $(".scrollable").scrollable();
+  $(".items img").click(function() {
+		// see if same thumb is being clicked
+		if ($(this).hasClass("active")) { return; }
+	 
+		// calclulate large image's URL based on the thumbnail URL (flickr specific)
+		var url = $(this).attr("src");
+	 
+		// find current image position
+		var position = 0;
+		$(this).parent().parent().children('div').children('img').each(function (index, domEle) {
+			  if ($(domEle).attr('src') == url) position=index;
+		});
+		var element = mycarousel_itemList[position];
+		$('#jtitle_wrap').text(element.title);
+		var description = element.content;
+		if (description=='') description='&nbsp;';
+		$('#jdescription_wrap').html(description);
+		url = element.image;
+		
+		// get handle to element that wraps the image and make it semi-transparent
+		var wrap = $("#jimage_wrap").fadeTo("medium", 0.5);
+	 
+		// the large image from www.flickr.com
+		var img = new Image();
+	 
+		// call this function after it's loaded
+		img.onload = function() {
+			// make wrapper fully visible
+			wrap.fadeTo("fast", 1);
+	 
+			// change the image
+			wrap.find("img").attr("src", url);
+		};
+	 
+		// begin loading the image
+		img.src = url;
+	 
+		// activate item
+		$(".items img").removeClass("active");
+		$(this).addClass("active");
+	 
+	// when page loads simulate a "click" on the first image
+	}).filter(":first").click();
+});
+/*]]>*/
+</script>
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+<!-- ###TEMPLATE_CONTROL#### end -->
+###IMAGETAG###
+<!-- ###TEMPLATE_CONTROL#### end -->
+
+</body>
+</html>

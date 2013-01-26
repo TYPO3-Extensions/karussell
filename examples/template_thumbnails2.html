@@ -1,0 +1,114 @@
+<html>
+<body>
+<p>Static Karussell-Template 3</p>
+<p>Test it with Karussell-elements and this TypoScript:</p>
+<pre>
+plugin.tx_karussell_pi1 {
+  styleFile = EXT:karussell/examples/style_thumbnails2.css
+  templateFile = EXT:karussell/examples/template_thumbnails2.html
+  
+  images {    
+    dirName = pics    
+    maxW = 700
+    maxH = 500
+	maxWthumb = 100
+	maxHthumb = 75
+  }
+  
+  listView.results_at_a_time = 100
+}
+plugin.tx_karussell_pi1.jCarousel {
+  wrap = 'both'
+  animation = 'slow'
+  dynamic = false
+  visible = 1
+}
+</pre>
+
+<!-- ###TEMPLATE_GLOBAL#### end -->
+<script type="text/javascript">
+/*<![CDATA[*/
+var position=1;
+var oldPosition=0;
+
+function markImage() {
+    if (oldPosition>0) {
+      document.getElementById('jz'+oldPosition).style.backgroundColor='#cccccc';
+      document.getElementById('jz'+oldPosition).style.borderColor='#cccccc';
+    }
+    document.getElementById('jz'+position).style.backgroundColor='#ffffff';
+    document.getElementById('jz'+position).style.borderColor='#000000';
+    oldPosition=position;
+    return;
+}
+
+function mycarousel_initCallback(carousel) {
+	// thumbnail clickbar
+	jQuery('#jcarousel-navigation a').bind('click', function() {
+        carousel.scroll(position);
+        markImage();
+        return false;
+    });
+	jQuery('.jcarousel-next').bind('click', function() {
+		position++;
+		if (position > carousel.options.size) position = 1;
+		markImage();
+	});
+	jQuery('.jcarousel-prev').bind('click', function() {
+		position--;
+		if (position < 1) position = carousel.options.size;
+		markImage();
+	});
+	markImage();
+};
+// function mycarousel_next(carousel) {}
+// function mycarousel_prev(carousel) {}
+
+if (typeof document.body.style.maxHeight != "undefined") {
+  jQuery(document).ready(function() {
+   jQuery('#mycarousel').jcarousel({
+      wrap: ###WRAP###,
+      visible: 1,
+      auto: 0,
+      animation: ###ANIMATION###,
+      easing: ###EASING###,
+      scroll: 1,
+      start: 1,
+      vertical: ###VERTICAL###,
+      rtl: ###RTL###,
+	  initCallback: mycarousel_initCallback
+//	  buttonNextCallback: mycarousel_next,
+//	  buttonPrevCallback: mycarousel_prev
+   });
+  });
+}
+/*]]>*/
+</script>
+
+<div id="wrapJ">
+ <ul id="mycarousel">
+  ###ITEMS###
+ </ul>
+ <ul id="jcarousel-navigation">
+  ###CONTROL###
+ </ul>
+</div>
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+The following markers are here avaiable: TITLE, CONTENT, IMAGE, IMAGETAG, LINK, LINKTAG and NR.
+<!-- ###TEMPLATE_ITEM#### end -->
+<li class="jcarousel-item jcarousel-item-horizontal">
+	###IMAGETAG###
+	<p><b>###TITLE###</b><br />###CONTENT###</p>
+</li>
+<!-- ###TEMPLATE_ITEM#### end -->
+
+
+Allowed are the same marker als in TEMLATE_ITEM.
+<!-- ###TEMPLATE_CONTROL#### end -->
+<li id="jz###NR###" class="jzelem"><a href="#" id="jza###NR###" onclick="position=###NR###;return false;">###IMAGETAG###</a></li>
+<!-- ###TEMPLATE_CONTROL#### end -->
+
+</body>
+</html>

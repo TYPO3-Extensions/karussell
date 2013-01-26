@@ -1,0 +1,49 @@
+<html>
+<body>
+<p>Background Karussell-Template</p>
+<p>"Simple jQuery fullscreen image gallery" from here:
+http://manos.malihu.gr/simple-jquery-fullscreen-image-gallery
+Copy the JavaScript and CSS from there to your fileadmin-folder!!!
+It works not perfekt :-(
+Test it with:</p>
+<pre>
+plugin.tx_karussell_pi1.templateFile = EXT:karussell/examples/template_malihu.html
+plugin.tx_karussell_pi1.styleFile = fileadmin/template/styles/malihu.css
+plugin.tx_karussell_pi1.jsFile = fileadmin/template/files/malihu.js
+plugin.tx_karussell_pi1.listView.results_at_a_time2 = 1
+</pre>
+
+
+<!-- ###TEMPLATE_GLOBAL#### begin -->
+<div id="bg">
+	<a href="#" class="nextImageBtn" title="next"></a>
+	<a href="#" class="prevImageBtn" title="previous"></a>
+	###ITEMS2###
+</div>
+<div id="preloader"><img src="/typo3conf/ext/karussell/examples/loading-small.gif" width="32" height="32" /></div>
+<div id="img_title"></div>
+<div id="toolbar"><a href="#" title="Maximize" onClick="ImageViewMode('full');return false"><img src="/your/path/toolbar_fs_icon.png" width="50" height="50"  /></a></div>
+<div id="thumbnails_wrapper">
+<div id="outer_container">
+<div class="thumbScroller">
+<div class="container">
+###ITEMS###
+</div>
+</div>
+</div>
+</div>
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+You can use ###IMAGETAG### instead of ###TITLE### too:
+<!-- ###TEMPLATE_ITEM#### begin -->
+	<div class="content"><div><a href="###IMAGE###">###TITLE###</a></div></div>
+<!-- ###TEMPLATE_ITEM#### end -->
+
+
+<!-- ###TEMPLATE_ITEM2#### begin -->
+	<img src="###IMAGE###" alt="###TITLE###" title="###TITLE###" id="bgimg" />
+<!-- ###TEMPLATE_ITEM2#### end -->
+
+</body>
+</html>

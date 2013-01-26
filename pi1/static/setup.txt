@@ -1,0 +1,76 @@
+plugin.tx_karussell_pi1 {
+	pidList =
+	recursive =
+	templateFile = EXT:karussell/examples/template.html
+	styleFile = EXT:karussell/examples/skin.css
+	jsFile = EXT:karussell/res/jquery.jcarousel.min.js
+	loadEverytime = 0
+	table =
+	searchFieldList =
+	andWhere =
+	sort =
+	foreignSelect =
+	parameterUID =
+	destinationPID =
+	linkText = Mehr ...
+	crop =
+	fimila =
+	disableControl = 0
+	debug = 0
+	jCarousel {
+		wrap = 'circular'
+		auto = 10
+		animation = 'fast'
+		easing = 'swing'
+		start = 1
+		scroll = 1
+		visible = null
+		vertical = false
+		rtl = false
+		dynamic = false
+		visible_wrap_start =
+		visible_wrap_end =
+	}
+	listView {
+		maxPages = 1
+		results_at_a_time = 100
+		results_at_a_time2 =
+	}
+	images {
+		dirName =
+		maxW =
+		maxH =
+		maxWthumb =
+		maxHthumb =
+		checkDefaultLang = 0
+		langField = t3_origuid
+		setTitle = 0
+	}
+	nl2br = 1
+	# Rendering of items. re-use the RTE parseFunc configuration for normal content
+	use_stdWrap = 0
+	general_stdWrap {
+#		parseFunc < lib.parseFunc_RTE
+		parseFunc < tt_content.text.20.parseFunc
+		parseFunc {
+			nonTypoTagStdWrap.encapsLines.nonWrappedTag >
+			nonTypoTagStdWrap.encapsLines.remapTag >
+#			nonTypoTagStdWrap.encapsLines >
+			nonTypoTagStdWrap.encapsLines {
+				encapsTagList = div,p
+				removeWrapping = 1
+				wrapNonWrappedLines = |
+			}
+		}
+	}
+}
+  # Example of default set CSS styles (these go into the document header):
+# plugin.tx_karussell_pi1._CSS_DEFAULT_STYLE (
+#  . H2 { margin-top: 0px; margin-bottom: 0px; }
+# )
+  # Example of how to overrule LOCAL_LANG values for the plugin:
+# plugin.tx_karussell_pi1._LOCAL_LANG.default {
+#  pi_list_searchBox_search = Search!
+# }
+  # Example of how to set default values from TS in the incoming array, $this->piVars of the plugin:
+# plugin.tx_karussell_pi1._DEFAULT_PI_VARS.test = test

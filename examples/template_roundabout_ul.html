@@ -1,0 +1,90 @@
+<html>
+<body>
+<p>Static Karussell-Template for roundabout</p>
+First download Roundabout for jQuery from here:
+http://fredhq.com/projects/roundabout/
+Copy the file to your fileadmin-folder. Check the path to the file.
+Test it with this TS:
+<pre>
+plugin.tx_karussell_pi1 {
+  styleFile = EXT:karussell/examples/style_roundabout_ul.css
+  templateFile = EXT:karussell/examples/template_roundabout_ul.html
+  jsFile = fileadmin/template/scripts/jquery.roundabout.min.js
+}
+plugin.tx_karussell_pi1.jCarousel.dynamic = false
+plugin.tx_karussell_pi1.listView.results_at_a_time = 20
+</pre>
+
+<!-- ###TEMPLATE_GLOBAL#### end -->
+<div class="roundabout-wrap">
+  <ul class="roundabout-holder">
+	###ITEMS###
+  </ul>
+  <a href="#" onclick="this.blur();return false;" id="nextExp"><img src="/typo3conf/ext/karussell/examples/prev.png" alt="zurück" title="zurück" /></a>
+  <a href="#" onclick="this.blur();return false;" id="prevExp"><img src="/typo3conf/ext/karussell/examples/next.png" alt="weiter" title="weiter" /></a>
+</div>
+
+<div id="filler">
+<div id="description"></div>
+</div>
+
+<script type="text/javascript">
+/*<![CDATA[*/
+var currentElem=0;
+var maxElem=###MAX###;
+
+$('.roundabout-moveable-item').focus(function() {
+	var theID = $(this).attr('id');
+	var useText = document.getElementById(theID+'h').innerHTML;
+	$('#description').html(useText).fadeIn(200);
+	currentElem = parseInt( theID.slice( theID.indexOf("-")+1 ) );
+});
+
+$('#prevExp').click(function(e) {
+	e.preventDefault();
+	currentElem++;
+	if (currentElem>maxElem) currentElem=1;
+	$('.roundabout-holder').roundabout_animateToChild(currentElem-1);
+	var theID='roundabout-'+currentElem+'h';
+	var useText = document.getElementById(theID).innerHTML;
+	$('#description').html(useText).fadeIn(200);
+});
+$('#nextExp').click(function(e) {
+	e.preventDefault();
+	currentElem--;
+	if (currentElem <= 0) currentElem=maxElem;	
+	$('.roundabout-holder').roundabout_animateToChild(currentElem-1);
+	var theID='roundabout-'+currentElem+'h';
+	var useText = document.getElementById(theID).innerHTML;
+	$('#description').html(useText).fadeIn(200);
+});
+
+$(document).ready(function() {
+	$('.roundabout-holder').roundabout({
+		startingChild: (###START###-1),
+		easing: 'swing',
+		shape: 'square',
+		duration: 1000,
+		maxScale: 1.0,
+		minScale: 0.2
+	});
+});
+/*]]>*/
+</script>
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+The following markers are here avaiable: TITLE, CONTENT, IMAGE, IMAGETAG, LINK, LINKTAG, NR, UID and IS_START.
+<!-- ###TEMPLATE_ITEM#### end -->
+<li class="roundabout-moveable-item" id="roundabout-###NR###">
+	###IMAGETAG###
+	<div id="roundabout-###NR###h" class="roundabout-hidden">
+		<h3>###TITLE###</h3>
+		<div>###CONTENT###</div>
+		<div style="padding-top:3px;">###LINKTAG###</div>
+	</div>
+</li>
+<!-- ###TEMPLATE_ITEM#### end -->
+
+</body>
+</html>

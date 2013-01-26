@@ -1,0 +1,50 @@
+<html>
+<body>
+<p>Static Karussell-Template</p>
+
+<!-- ###TEMPLATE_GLOBAL#### end -->
+<script type="text/javascript">
+function initCallbackFunction(carousel, state) {
+	// Disable autoscrolling if the user clicks the prev or next button.
+    carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });
+	
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+   jQuery('#mycarousel').jcarousel({
+      wrap: 'circular',
+      visible: ###VISIBLE###,
+      auto: ###AUTO###,
+      animation: ###ANIMATION###,
+      easing: ###EASING###,
+      scroll: ###SCROLL###,
+      start: ###START###,
+      vertical: ###VERTICAL###,
+      initCallback: initCallbackFunction
+   });
+});
+</script>
+
+<ul id="mycarousel" class="jcarousel-skin-ie7">
+###ITEMS###
+</ul>
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+<!-- ###TEMPLATE_ITEM#### end -->
+<li class="jcarousel-item jcarousel-item-horizontal"><div style="background: url('###IMAGE###') no-repeat;" class="hinter"><div class="vorder"><h2>###TITLE###</h2><p>###CONTENT###</p><p>###LINKTAG###</p></div></div></li>
+<!-- ###TEMPLATE_ITEM#### end -->
+
+</body>
+</html>

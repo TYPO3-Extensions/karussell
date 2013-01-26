@@ -1,0 +1,137 @@
+#vorJ {
+	position: relative;
+	clear: both;
+    width: 500px;
+    height: 350px;
+}
+#vorJ ul {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+#mycarousel {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	clear: both;
+}
+#mycarousel,
+#mycarousel li {
+	list-style: none !important;
+	list-style-image: none !important;
+    width: 500px;
+    height: 350px;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+}
+
+#mycarousel .jcarousel-container {
+    width: 500px;
+    height: 350px;
+	padding: 0;
+	margin: 0;
+}
+
+#mycarousel .jcarousel-container-horizontal {
+    width: 500px;
+    height: 350px;
+	padding: 0;
+	margin: 0;
+}
+
+#mycarousel .jcarousel-clip-horizontal {
+    width:  500px;
+    height: 350px;
+	padding: 0;
+	margin: 0;
+}
+
+#mycarousel .jcarousel-item {
+    width: 500px;
+    height: 350px;
+	padding: 0;
+	margin: 0;
+}
+
+
+/**
+ *  Horizontal Buttons
+ */
+#mycarousel .jcarousel-next-horizontal {
+    position: absolute;
+	display: none;
+}
+
+#mycarousel .jcarousel-prev-horizontal {
+    position: absolute;
+	display: none;
+}
+
+
+/**
+ *  Rest
+ */
+.jcarousel-control {
+	position: absolute;
+	top: 218px;
+	left: 292px;
+	padding: 0 !important;
+	margin: 0 !important;
+	z-index: 10;
+	height: 33px;
+}
+
+.jcarousel-control div {
+	float: left;
+	text-align: center;
+    margin: 0 0 0 2px;
+	padding: 0;
+	width: 22px;
+	height: 28px;
+	padding: 5px 0 0 0;
+	background-color: #e7e1d8;
+	filter:alpha(opacity=80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+}
+.jcarousel-control div a {
+    font-size: 120%;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.jcarousel-control a:focus,
+.jcarousel-control a:active {
+    outline: none;
+}
+
+#mycarousel  h1 { margin: 5px 0 8px 0; }
+
+#jznav {
+	position: absolute;
+	top: 218px;
+	left: 390px;
+	padding: 0 !important;
+	margin: 0 !important;
+	z-index: 11;
+	height: 33px;
+}
+#stst {
+	text-align: center;
+    margin: 0;
+	padding: 0;
+	width: 80px;
+	height: 24px;
+	padding: 9px 0 0 0;
+	background-color: #eeeeee;
+	filter:alpha(opacity=80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+}
+
+#jcarousel-2,
+#jcarousel-3,
+#jcarousel-4 { display: none; }

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for extension 'karussell'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="pi1_title">Karussell: based on jCarousel</label>
+			<label index="pi1_plus_wiz_description">Shows all content on a carousel</label>
+		</languageKey>
+		<languageKey index="fr" type="array">
+			<label index="pi1_title">Karussell: basé sur jCarousel</label>
+			<label index="pi1_plus_wiz_description">Affiche tout le contenu sur un carrousel</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="pi1_title">Karussell: basiert auf jCarousel</label>
+			<label index="pi1_plus_wiz_description">Zeigt beliebige Inhalte in einem Karussell</label>
+		</languageKey>
+		<languageKey index="dk" type="array">
+        </languageKey>
+		<languageKey index="no" type="array">
+        </languageKey>
+        <languageKey index="it" type="array">
+			<label index="pi1_title">Karussell: basato su jCarousel</label>
+			<label index="pi1_plus_wiz_description">Mostra tutti i contenuti su una giostra</label>
+        </languageKey>
+        <languageKey index="es" type="array">
+			<label index="pi1_title">Karussell: basado en jCarousel</label>
+			<label index="pi1_plus_wiz_description">Muestra todo el contenido en un carrusel</label>
+        </languageKey>
+        <languageKey index="nl" type="array">
+        </languageKey>
+        <languageKey index="cz" type="array">
+        </languageKey>
+        <languageKey index="pl" type="array">
+        </languageKey>
+        <languageKey index="si" type="array">
+        </languageKey>
+        <languageKey index="fi" type="array">
+        </languageKey>
+        <languageKey index="tr" type="array">
+        </languageKey>
+        <languageKey index="se" type="array">
+        </languageKey>
+        <languageKey index="pt" type="array">
+        </languageKey>
+        <languageKey index="ru" type="array">
+        </languageKey>
+        <languageKey index="ro" type="array">
+			<label index="pi1_title">Karussell: bazat pe jCarousel</label>
+			<label index="pi1_plus_wiz_description">Afişează tot conţinutul pe un carusel</label>
+        </languageKey>
+	</data>
+</T3locallang>

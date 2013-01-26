@@ -1,0 +1,114 @@
+<html>
+<body>
+<p>Static Karussell-Template 3</p>
+<p>Test it with the style_control3.css and this TypoScript:</p>
+<pre>
+plugin.tx_karussell_pi1 {
+  searchFieldList = title,bodytext,image,  
+  linkText = More
+  table = tt_news    
+  parameterUID =
+  destinationPID =
+  sort = datetime:DESC
+  styleFile = EXT:karussell/examples/style_control3.css
+  templateFile = EXT:karussell/examples/template_control3.html
+  
+  images {    
+    dirName = pics    
+    maxW = 700
+    maxH =  
+  }
+  
+  listView.results_at_a_time = 10
+}
+plugin.tx_karussell_pi1.jCarousel {
+  wrap = 'last'
+  animation = 'slow'
+  dynamic = false
+  visible = 1
+  start = 1
+  scroll = 1
+  auto = 0
+}
+</pre>
+<p>Note: it does not work with old browsers! Use circular or last as wrap.</p>
+
+
+<!-- ###TEMPLATE_GLOBAL#### end -->
+<script type="text/javascript">
+/*<![CDATA[*/
+var autostart=false;
+var position=0;
+function mycarousel_initCallback(carousel) {
+	// titel clickbar
+	jQuery('.jcarousel-control a').bind('click', function() {
+        carousel.scroll(position);
+        return false;
+    });
+};
+
+function mycarousel_itemVisibleInCallback(carousel, item, i, state, evt) {
+	if (i<1) {
+		do {
+			i+=###MAX###;
+		} while(i<1);
+	}
+	for (var j=1; j<=###MAX###; j++) {
+		if (((i%###MAX###)==j) || (((i%###MAX###)==0) && (j==###MAX###))) {
+			document.getElementById("jza"+j).style.color = "#006B04";
+		} else {
+			document.getElementById("jza"+j).style.color = "#7c7c7c";
+		}
+	}
+};
+
+if (typeof document.body.style.maxHeight != "undefined") {
+  jQuery(document).ready(function() {
+   jQuery('#mycarousel').jcarousel({
+      wrap: ###WRAP###,
+      visible: ###VISIBLE###,
+      auto: ###AUTO###,
+      animation: ###ANIMATION###,
+      easing: ###EASING###,
+      scroll: ###SCROLL###,
+      start: ###START###,
+      vertical: ###VERTICAL###,
+      rtl: ###RTL###,
+	  initCallback: mycarousel_initCallback,
+	  itemVisibleInCallback: {onBeforeAnimation: mycarousel_itemVisibleInCallback}
+   });
+  });
+}
+/*]]>*/
+</script>
+
+<div id="vorJ">
+ <ul id="mycarousel">
+  ###ITEMS###
+ </ul>
+ <div id="jcarousel-navigation">
+  <div class="jcarousel-control">
+	<table cellpadding="0" cellspacing="0" border="0"><tr>###CONTROL###</tr></table>
+  </div>
+ </div>
+</div>
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+The following markers are here avaiable: TITLE, CONTENT, IMAGE, IMAGETAG, LINK, LINKTAG and NR.
+<!-- ###TEMPLATE_ITEM#### end -->
+<li class="jcarousel-item jcarousel-item-horizontal">
+	<div style="background: url(###IMAGE###) no-repeat;" class="hinter">
+		<div class="vorder">###CONTENT###</div>
+	</div>
+</li>
+<!-- ###TEMPLATE_ITEM#### end -->
+
+
+Allowed are the same marker als in TEMLATE_ITEM.
+<!-- ###TEMPLATE_CONTROL#### end -->
+<td id="jz###NR###" class="jzelem"><a href="#" id="jza###NR###" onclick="position=###NR###;return false;">###TITLE###</a></td>
+<!-- ###TEMPLATE_CONTROL#### end -->
+
+</body>
+</html>

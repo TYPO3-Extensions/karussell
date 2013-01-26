@@ -1,0 +1,111 @@
+<html>
+<body>
+<p>This circular content carousel needs the JavaScript-plugin from here, because it doesn't use jCarousel at all:
+http://tympanus.net/codrops/2011/08/16/circular-content-carousel/
+<br />Extract the ZIP-file to your fileadmin/template folder!<br />
+Then test it with myquizpoll and this TypoScript (customise path, easing-version, styles, etc.):</p>
+<pre>
+page.headerData.23 = TEXT
+page.headerData.23.value (
+<script type="text/javascript" src="fileadmin/template/CircularContentCarousel/js/jquery.easing.1.3.js"></script>
+)
+plugin.tx_karussell_pi1 {
+  jsFile = fileadmin/template/CircularContentCarousel/js/jquery.contentcarousel.js
+  styleFile = EXT:karussell/examples/style_ccc_quiz.css
+  templateFile = EXT:karussell/examples/template_ccc_quiz.html
+  searchFieldList = title,name,image,1,answer1,correct1,answer2,correct2,answer3,correct3,answer4,correct4,answer5,correct5,explanation
+  table = tx_myquizpoll_question
+  sort = sorting:ASC
+  images {
+    dirName = tx_myquizpoll
+    maxW = 195
+    maxH = 135
+  }
+  listView.results_at_a_time = 100
+}
+plugin.tx_karussell_pi1.jCarousel {
+  animation = 500
+  scroll = 3
+  easing = 'easeOutExpo'
+}
+</pre>
+
+
+
+Also avaiable here: ###UID###, ###MAX###.
+<!-- ###TEMPLATE_GLOBAL#### begin -->
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	jQuery('#ca-container').contentcarousel({
+	    // speed for the sliding animation
+	    sliderSpeed     : ###ANIMATION###,
+	    // easing for the sliding animation
+	    sliderEasing    : ###EASING###,
+	    // speed for the item animation (open / close)
+	    itemSpeed       : ###ANIMATION###,
+	    // easing for the item animation (open / close)
+	    itemEasing      : ###EASING###,
+	    // number of items to scroll at a time
+	    scroll          : ###SCROLL###
+	});
+});
+function showOnlyCor(nr,c1,c2,c3,c4,c5) {
+	if (c1==0) jQuery('#ca-answer1'+nr).hide();
+	if (c2==0) jQuery('#ca-answer2'+nr).hide();
+	if (c3==0) jQuery('#ca-answer3'+nr).hide();
+	if (c4==0) jQuery('#ca-answer4'+nr).hide();
+	if (c5==0) jQuery('#ca-answer5'+nr).hide();
+	if (jQuery('#ca-expl_c'+nr).is(':empty')) jQuery('#ca-expl'+nr).hide();
+	if (jQuery('#ca-image'+nr).is(':empty')) jQuery('#ca-image'+nr).append('<img src="/typo3conf/ext/karussell/examples/no_image.jpg" />');
+}
+</script>
+
+<div id="ca-container" class="ca-container">
+    <div class="ca-wrapper">
+###ITEMS###
+    </div><!-- ca-wrapper -->
+</div><!-- ca-container -->
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+
+
+The following markers are here avaiable: TITLE, CONTENT, IMAGE, IMAGETAG, LINK, LINKTAG, NR, UID and IS_START.
+Furthermore: LOCAL_field and FOREIGN_field
+<!-- ###TEMPLATE_ITEM#### begin -->
+<div class="ca-item ca-item-###NR###">
+    <div class="ca-item-main">
+        <div class="ca-icon" id="ca-image###NR###">###IMAGETAG###</div>
+        <h3>###TITLE###</h3>
+        <h4>
+            <span class="ca-quote">“</span>
+            <span>###CONTENT###</span>
+        </h4>
+        <a href="#" class="ca-more">ansehen</a>
+    </div>
+    <div class="ca-content-wrapper">
+        <div class="ca-content">
+            <h6>Die Lösung</h6>
+            <a href="#" class="ca-close">schließen</a>
+            <div class="ca-content-text">
+            	<p>Die richtigen Antworten lauten:</p>
+            	<ul>
+                <li class="ca-clear" id="ca-answer1###NR###">###LOCAL_ANSWER1### </li>
+                <li class="ca-clear" id="ca-answer2###NR###">###LOCAL_ANSWER2### </li>
+                <li class="ca-clear" id="ca-answer3###NR###">###LOCAL_ANSWER3### </li>
+                <li class="ca-clear" id="ca-answer4###NR###">###LOCAL_ANSWER4### </li>
+                <li class="ca-clear" id="ca-answer5###NR###">###LOCAL_ANSWER5### </li>
+                </ul>
+                <p class="ca-explanation" id="ca-expl###NR###">Erklärung:<br />
+                	<span id="ca-expl_c###NR###">###LOCAL_EXPLANATION###</span></p>
+            </div>
+        </div>
+    </div>
+	<script type="text/javascript">
+	  showOnlyCor(###NR###,###LOCAL_CORRECT1###,###LOCAL_CORRECT2###,###LOCAL_CORRECT3###,###LOCAL_CORRECT4###,###LOCAL_CORRECT5###);
+	</script>
+</div>
+<!-- ###TEMPLATE_ITEM#### end -->
+
+</body>
+</html>

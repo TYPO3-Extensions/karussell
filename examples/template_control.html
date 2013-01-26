@@ -1,0 +1,117 @@
+<html>
+<body>
+<p>Static Karussell-Template</p>
+<p>Test it with the style_control.css and this TypoScript:</p>
+<pre>
+plugin.tx_karussell_pi1 {
+  searchFieldList = title,short,image,  
+  linkText = More
+  table = tt_news    
+  parameterUID = tx_ttnews[tt_news]  
+  destinationPID = 23
+  sort = datetime:DESC
+  styleFile = EXT:karussell/examples/style_control.css
+  templateFile = EXT:karussell/examples/template_control.html
+  
+  images {    
+    dirName = pics    
+    maxW = 583  
+    maxH =  
+  }
+  
+  listView.results_at_a_time = 4
+}
+plugin.tx_karussell_pi1.jCarousel {
+  wrap = 'circular'
+  animation = 'fast'
+  dynamic = false
+  visible = 1
+  start = 1
+  scroll = 1
+  auto = 10
+}
+</pre>
+<p>Note: it does not work with old browsers! Use circular or last as wrap.</p>
+
+
+<!-- ###TEMPLATE_GLOBAL#### begin -->
+<script type="text/javascript">
+/*<![CDATA[*/
+function mycarousel_initCallback(carousel) {
+	// zahlen clickbar
+	jQuery('.jcarousel-control a').bind('click', function() {
+        carousel.scroll(jQuery.jcarousel.intval(jQuery(this).text()));
+        return false;
+    });
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+function mycarousel_itemVisibleInCallback(carousel, item, i, state, evt) {
+	for (var j=1; j<=4; j++) {
+		if (i==j) {
+			document.getElementById("jz"+j).style.border = "solid #666666 2px";			
+			document.getElementById("jza"+j).style.color = "#aa0000";
+		} else {
+			document.getElementById("jz"+j).style.border = "solid #000000 2px";		
+			document.getElementById("jza"+j).style.color = "#000000";
+		}
+	}
+};
+
+if (typeof document.body.style.maxHeight != "undefined") {
+  jQuery(document).ready(function() {
+   jQuery('#mycarousel').jcarousel({
+      wrap: ###WRAP###,
+      visible: ###VISIBLE###,
+      auto: ###AUTO###,
+      animation: ###ANIMATION###,
+      easing: ###EASING###,
+      scroll: ###SCROLL###,
+      start: ###START###,
+      vertical: ###VERTICAL###,
+	  initCallback: mycarousel_initCallback,
+	  itemVisibleInCallback: {onBeforeAnimation: mycarousel_itemVisibleInCallback}
+   });
+  });
+}
+/*]]>*/
+</script>
+
+<div id="vorJ">
+ <ul id="mycarousel">
+  ###ITEMS###
+ </ul>
+ 
+ <div class="jcarousel-control" id="jcarousel-zahlen">
+  <div id="jz1"><a href="#" id="jza1">1</a></div>
+  <div id="jz2"><a href="#" id="jza2">2</a></div>
+  <div id="jz3"><a href="#" id="jza3">3</a></div>
+  <div id="jz4"><a href="#" id="jza4">4</a></div>
+ </div>
+</div>
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+<!-- ###TEMPLATE_ITEM#### begin -->
+<li class="jcarousel-item jcarousel-item-horizontal jcarousel-start-###IS_START###">
+	<div style="background: url(###IMAGE###) no-repeat;" class="hinter">
+		<div class="vorder">
+			<h2><a href="###LINK###" target="extern">###TITLE###</a></h2>
+			<p>###CONTENT### ###LINKTAG###</p>
+		</div>
+	</div>
+</li>
+<!-- ###TEMPLATE_ITEM#### end -->
+Note: hide elements - that are not displayed first - in old browsers.
+Example for IE 6:
+* html .jcarousel-start-0,
+* html .jcarousel-control { display:none; }
+
+</body>
+</html>

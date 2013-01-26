@@ -1,0 +1,76 @@
+<html>
+<body>
+<p>
+jQuery GalleryView example. You need the GalleryView plugin from here for this example:
+http://spaceforaname.com/galleryview/index.html
+Extract the zip file and copy it to your fileadmin-folder!
+Include the JS-file by Flexform or with TypoScript like this:
+plugin.tx_karussell_pi1.jsFile = fileadmin/template/javascript/jquery.galleryview-3.0-dev.js
+Note: you need jquery.timers too! Copy that file into the galleryview-js-file or include it another way.
+Test it with this TypoScript:
+
+plugin.tx_karussell_pi1 {
+  templateFile = EXT:karussell/examples/template_galleryview.html
+  jsFile = fileadmin/template/galleryview/js/jquery.galleryview-3.0-dev.js
+  styleFile = fileadmin/template/galleryview/css/jquery.galleryview-3.0-dev.css
+  jCarousel {
+	dynamic = false
+    animation = 1100
+    start = 1
+    auto = false
+  }
+}
+
+Note: you can define the start-element with a URL parameter: "&start=4" starts with element no. 4
+</p>
+
+
+Also avaiable here: ###UID###, ###MAX###, ###CONTROL###, ###ITEMS2###.
+<!-- ###TEMPLATE_GLOBAL#### begin -->
+<script type="text/javascript">
+function get_url_param( name ){
+	name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+	var regexS = "[\\?&]"+name+"=([^&#]*)";
+	var regex = new RegExp( regexS );
+	var results = regex.exec( window.location.href );
+	if ( results == null )
+		return ###START###;
+	else
+		return results[1];
+}
+
+jQuery(document).ready(function() {
+  $('#myGallery').galleryView({
+	transition_speed: ###ANIMATION###,
+	enable_overlays: true,
+	panel_width: 700,
+	panel_height: 500,
+	panel_scale: 'fit',
+	start_frame: get_url_param('start'),
+	autoplay: ###AUTO###,
+	show_filmstrip_nav: false,
+	show_captions: false,
+	filmstrip_style: 'showall',
+	frame_width: 95,
+	frame_height: 68,
+	infobar_opacity: 0.75,
+	easing: ###EASING###
+  });
+});
+</script>
+
+<ul id="myGallery">
+###ITEMS###
+</ul>
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+The following markers are here avaiable: TITLE, CONTENT, IMAGE, IMAGETAG, LINK, LINKTAG, NR, UID and IS_START.
+Furthermore: LOCAL_field and FOREIGN_field
+<!-- ###TEMPLATE_ITEM#### begin -->
+<li><img src="###IMAGE###" title="###TITLE###" data-description="###CONTENT###" /></li>
+<!-- ###TEMPLATE_ITEM#### end -->
+
+Also avaiable: ###TEMPLATE_CONTROL####, ###TEMPLATE_ITEM2####.
+</body>
+</html>

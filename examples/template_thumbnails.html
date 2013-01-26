@@ -1,0 +1,98 @@
+<html>
+<body>
+<p>Static Karussell-Template 3</p>
+<p>Test it with the style_control3.css and this TypoScript:</p>
+<pre>
+plugin.tx_karussell_pi1 {
+  searchFieldList = title,bodytext,image,  
+  linkText = More
+  table = tt_news    
+  parameterUID =
+  destinationPID =
+  sort = datetime:DESC
+  styleFile = EXT:karussell/examples/style_thumbnails.css
+  templateFile = EXT:karussell/examples/template_thumbnails.html
+  
+  images {    
+    dirName = pics    
+    maxW = 700
+    maxH = 500
+	maxWthumb = 100
+	maxHthumb = 75
+  }
+  
+  listView.results_at_a_time = 100
+}
+plugin.tx_karussell_pi1.jCarousel {
+  wrap = 'circular'
+  animation = 'slow'
+  dynamic = false
+  visible = 1
+  start = 1
+  scroll = 1
+  auto = 7
+}
+</pre>
+<p>Note: it does not work with old browsers! Use circular or last as wrap.</p>
+
+
+<!-- ###TEMPLATE_GLOBAL#### end -->
+<script type="text/javascript">
+/*<![CDATA[*/
+var position=0;
+function mycarousel_initCallback(carousel) {
+	// thumbnails clickbar
+	jQuery('.jcarousel-control a').bind('click', function() {
+        carousel.scroll(position);
+        return false;
+    });
+};
+
+if (typeof document.body.style.maxHeight != "undefined") {
+  jQuery(document).ready(function() {
+   jQuery('#mycarousel').jcarousel({
+      wrap: ###WRAP###,
+      visible: 1,
+      auto: ###AUTO###,
+      animation: ###ANIMATION###,
+      easing: ###EASING###,
+      scroll: ###SCROLL###,
+      start: ###START###,
+      vertical: ###VERTICAL###,
+      rtl: ###RTL###,
+	  initCallback: mycarousel_initCallback
+   });
+  });
+}
+/*]]>*/
+</script>
+
+<div id="wrapJ">
+ <div id="jcarousel-navigation">
+  <div class="jcarousel-control">
+	<table cellpadding="0" cellspacing="0" border="0"><tr>###CONTROL###</tr></table>
+  </div>
+ </div>
+ <ul id="mycarousel">
+  ###ITEMS###
+ </ul>
+</div>
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+The following markers are here avaiable: TITLE, CONTENT, IMAGE, IMAGETAG, LINK, LINKTAG and NR.
+<!-- ###TEMPLATE_ITEM#### end -->
+<li class="jcarousel-item jcarousel-item-horizontal">
+	###IMAGETAG###
+	<p><b>###TITLE###</b><br />###CONTENT###</p>
+</li>
+<!-- ###TEMPLATE_ITEM#### end -->
+
+
+Allowed are the same marker als in TEMLATE_ITEM.
+<!-- ###TEMPLATE_CONTROL#### end -->
+<td id="jz###NR###" class="jzelem"><a href="#" id="jza###NR###" onclick="position=###NR###;return false;">###IMAGETAG###</a></td>
+<!-- ###TEMPLATE_CONTROL#### end -->
+
+</body>
+</html>

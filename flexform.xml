@@ -1,0 +1,686 @@
+<T3DataStructure>
+  <meta>
+    <langDisable>1</langDisable>
+  </meta>
+  <sheets>
+    <sDEF>
+      <ROOT>
+       <TCEforms>
+        <sheetTitle>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.title</sheetTitle>
+       </TCEforms>
+       <type>array</type>
+       <el>
+        <templateFile>
+            <TCEforms>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.templateFile</label>
+				<config>
+					<type>input</type>
+					<default></default>
+					<wizards type="array">
+						<_PADDING>2</_PADDING>
+						<link type="array">
+							<type>popup</type>
+							<title>Link</title>
+							<icon>link_popup.gif</icon>
+							<script>browse_links.php?mode=wizard&amp;act=file</script>
+							<params type="array">
+								<blindLinkOptions>page,url,mail,spec</blindLinkOptions>
+								<allowedExtensions>htm,html,tmpl,tpl</allowedExtensions>
+							</params>
+							<JSopenParams>height=300,width=500,status=0,menubar=0,scrollbars=1</JSopenParams>
+						</link>
+					</wizards>
+				</config>
+            </TCEforms>
+        </templateFile>
+        <styleFile>
+            <TCEforms>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.styleFile</label>
+				<config>
+					<type>input</type>
+					<default></default>
+					<wizards type="array">
+						<_PADDING>2</_PADDING>
+						<link type="array">
+							<type>popup</type>
+							<title>Link</title>
+							<icon>link_popup.gif</icon>
+							<script>browse_links.php?mode=wizard&amp;act=file</script>
+							<params type="array">
+								<blindLinkOptions>page,url,mail,spec</blindLinkOptions>
+								<allowedExtensions>css</allowedExtensions>
+							</params>
+							<JSopenParams>height=300,width=500,status=0,menubar=0,scrollbars=1</JSopenParams>
+						</link>
+					</wizards>
+				</config>
+            </TCEforms>
+        </styleFile>
+        <jsFile>
+            <TCEforms>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.jsFile</label>
+				<config>
+					<type>input</type>
+					<default></default>
+					<wizards type="array">
+						<_PADDING>2</_PADDING>
+						<link type="array">
+							<type>popup</type>
+							<title>Link</title>
+							<icon>link_popup.gif</icon>
+							<script>browse_links.php?mode=wizard&amp;act=file</script>
+							<params type="array">
+								<blindLinkOptions>page,url,mail,spec</blindLinkOptions>
+								<allowedExtensions>js</allowedExtensions>
+							</params>
+							<JSopenParams>height=300,width=500,status=0,menubar=0,scrollbars=1</JSopenParams>
+						</link>
+					</wizards>
+				</config>
+            </TCEforms>
+        </jsFile>
+        <table>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.table</label>
+                <config>
+                    <type>input</type>
+                    <size>15</size>
+                    <max>200</max>
+                    <eval>trim</eval>
+                </config>
+            </TCEforms>
+        </table>
+        <searchFieldList>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.searchFieldList</label>
+                <config>
+                    <type>input</type>
+                    <size>25</size>
+                    <max>200</max>
+                    <eval>trim</eval>
+                </config>
+            </TCEforms>
+        </searchFieldList>
+        <andWhere>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.andWhere</label>
+                <config>
+                    <type>input</type>
+                    <size>25</size>
+                    <max>200</max>
+                    <eval>trim</eval>
+                </config>
+            </TCEforms>
+        </andWhere>
+        <sort>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.sort</label>
+                <config>
+                    <type>input</type>
+                    <size>15</size>
+                    <max>200</max>
+                    <eval>trim</eval>
+                </config>
+            </TCEforms>
+        </sort>
+        <foreignSelect>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.foreignSelect</label>
+                <config>
+                    <type>input</type>
+                    <size>25</size>
+                    <max>250</max>
+                    <eval>trim</eval>
+                </config>
+            </TCEforms>
+        </foreignSelect>
+        <parameterUID>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.parameterUID</label>
+                <config>
+                    <type>input</type>
+                    <size>20</size>
+                    <max>200</max>
+                    <eval>trim</eval>
+                </config>
+            </TCEforms>
+        </parameterUID>
+        <destinationPID>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.destinationPID</label>
+                <config>
+                    <type>group</type>
+                    <internal_type>db</internal_type>
+                    <allowed>pages</allowed>
+                    <size>1</size>
+                    <maxitems>1</maxitems>
+                    <minitems>0</minitems>
+                    <show_thumbs>0</show_thumbs>
+                </config>
+            </TCEforms>
+        </destinationPID>
+        <results_at_a_time>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.results_at_a_time</label>
+                <config>
+                    <type>input</type>
+                    <size>5</size>
+                    <max>2</max>
+                    <eval>trim</eval>
+                </config>
+            </TCEforms>
+        </results_at_a_time>
+        <crop>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.crop</label>
+                <config>
+                    <type>input</type>
+                    <size>5</size>
+                    <max>5</max>
+                    <eval>trim</eval>
+                </config>
+            </TCEforms>
+        </crop>
+        <linkText>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.linkText</label>
+                <config>
+                    <type>input</type>
+                    <size>25</size>
+                    <max>125</max>
+                </config>
+            </TCEforms>
+        </linkText>
+        <disableControl>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.disableControl</label>
+                <config>
+                    <type>select</type>
+                    <items type="array">
+                        <numIndex index="0" type="array">
+                            <numIndex index="0">-</numIndex>
+                            <numIndex index="1"></numIndex>
+                        </numIndex>
+                        <numIndex index="1" type="array">
+                            <numIndex index="0">LLL:EXT:karussell/locallang_ff.xml:flexform.no</numIndex>
+                            <numIndex index="1">0</numIndex>
+                        </numIndex>
+                        <numIndex index="2" type="array">
+                            <numIndex index="0">LLL:EXT:karussell/locallang_ff.xml:flexform.yes</numIndex>
+                            <numIndex index="1">1</numIndex>
+                        </numIndex>
+                    </items>
+                </config>
+            </TCEforms>
+        </disableControl>
+       </el>
+      </ROOT>
+    </sDEF>
+    <sIMAGES>
+     <ROOT>
+       <TCEforms>
+        <sheetTitle>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.images.title</sheetTitle>
+       </TCEforms>
+       <type>array</type>
+       <el>
+        <dirName>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.images.dirName</label>
+                <config>
+                    <type>input</type>
+                    <size>15</size>
+                    <max>200</max>
+                    <eval>trim</eval>
+                </config>
+            </TCEforms>
+        </dirName>
+        <maxW>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.images.maxW</label>
+                <config>
+                    <type>input</type>
+                    <size>5</size>
+                    <max>20</max>
+                    <eval>trim</eval>
+                </config>
+            </TCEforms>
+        </maxW>
+        <maxH>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.images.maxH</label>
+                <config>
+                    <type>input</type>
+                    <size>5</size>
+                    <max>20</max>
+                    <eval>trim</eval>
+                </config>
+            </TCEforms>
+        </maxH>
+        <maxWthumb>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.images.maxWthumb</label>
+                <config>
+                    <type>input</type>
+                    <size>5</size>
+                    <max>20</max>
+                    <eval>trim</eval>
+                </config>
+            </TCEforms>
+        </maxWthumb>
+        <maxHthumb>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.images.maxHthumb</label>
+                <config>
+                    <type>input</type>
+                    <size>5</size>
+                    <max>20</max>
+                    <eval>trim</eval>
+                </config>
+            </TCEforms>
+        </maxHthumb>
+        <setTitle>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.images.setTitle</label>
+                <config>
+                    <type>select</type>
+                    <items type="array">
+                        <numIndex index="0" type="array">
+                            <numIndex index="0">-</numIndex>
+                            <numIndex index="1"></numIndex>
+                        </numIndex>
+                        <numIndex index="1" type="array">
+                            <numIndex index="0">LLL:EXT:karussell/locallang_ff.xml:flexform.no</numIndex>
+                            <numIndex index="1">0</numIndex>
+                        </numIndex>
+                        <numIndex index="2" type="array">
+                            <numIndex index="0">LLL:EXT:karussell/locallang_ff.xml:flexform.yes</numIndex>
+                            <numIndex index="1">1</numIndex>
+                        </numIndex>
+                    </items>
+                </config>
+            </TCEforms>
+        </setTitle>
+        <checkDefaultLang>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.images.checkDefaultLang</label>
+                <config>
+                    <type>select</type>
+                    <items type="array">
+                        <numIndex index="0" type="array">
+                            <numIndex index="0">-</numIndex>
+                            <numIndex index="1"></numIndex>
+                        </numIndex>
+                        <numIndex index="1" type="array">
+                            <numIndex index="0">LLL:EXT:karussell/locallang_ff.xml:flexform.no</numIndex>
+                            <numIndex index="1">0</numIndex>
+                        </numIndex>
+                        <numIndex index="2" type="array">
+                            <numIndex index="0">LLL:EXT:karussell/locallang_ff.xml:flexform.yes</numIndex>
+                            <numIndex index="1">1</numIndex>
+                        </numIndex>
+                    </items>
+                </config>
+            </TCEforms>
+        </checkDefaultLang>
+        <langField>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.images.langField</label>
+                <config>
+                    <type>select</type>
+                    <items type="array">
+                        <numIndex index="0" type="array">
+                            <numIndex index="0">-</numIndex>
+                            <numIndex index="1"></numIndex>
+                        </numIndex>
+                        <numIndex index="1" type="array">
+                            <numIndex index="0">t3_origuid</numIndex>
+                            <numIndex index="1">t3_origuid</numIndex>
+                        </numIndex>
+                        <numIndex index="2" type="array">
+                            <numIndex index="0">l10n_parent</numIndex>
+                            <numIndex index="1">l10n_parent</numIndex>
+                        </numIndex>
+                        <numIndex index="3" type="array">
+                            <numIndex index="0">l18n_parent</numIndex>
+                            <numIndex index="1">l18n_parent</numIndex>
+                        </numIndex>
+                    </items>
+                </config>
+            </TCEforms>
+        </langField>
+       </el>
+     </ROOT>
+    </sIMAGES>
+    <sJCAROUSEL>
+     <ROOT>
+       <TCEforms>
+        <sheetTitle>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.title</sheetTitle>
+       </TCEforms>
+       <type>array</type>
+       <el>
+        <wrap>
+            <TCEforms>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.wrap</label>
+                <config>
+                    <type>select</type>
+                    <items type="array">
+                        <numIndex index="0" type="array">
+                            <numIndex index="0">-</numIndex>
+                            <numIndex index="1"></numIndex>
+                        </numIndex>
+                        <numIndex index="1" type="array">
+                            <numIndex index="0">null</numIndex>
+                            <numIndex index="1">null</numIndex>
+                        </numIndex>
+                        <numIndex index="2" type="array">
+                            <numIndex index="0">first</numIndex>
+                            <numIndex index="1">'first'</numIndex>
+                        </numIndex>
+                        <numIndex index="3" type="array">
+                            <numIndex index="0">last</numIndex>
+                            <numIndex index="1">'last'</numIndex>
+                        </numIndex>
+                        <numIndex index="4" type="array">
+                            <numIndex index="0">both</numIndex>
+                            <numIndex index="1">'both'</numIndex>
+                        </numIndex>
+                        <numIndex index="5" type="array">
+                            <numIndex index="0">circular</numIndex>
+                            <numIndex index="1">'circular'</numIndex>
+                        </numIndex>
+                    </items>
+                </config>
+            </TCEforms>
+        </wrap>
+        <auto>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.auto</label>
+                <config>
+                    <type>input</type>
+                    <size>5</size>
+                    <max>20</max>
+                    <eval>trim</eval>
+                </config>
+            </TCEforms>
+        </auto>
+        <animation>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.animation</label>
+                <config>
+                    <type>input</type>
+                    <size>5</size>
+                    <max>20</max>
+                    <eval>trim</eval>
+                </config>
+            </TCEforms>
+        </animation>
+        <easing>
+            <TCEforms>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.easing</label>
+                <config>
+                    <type>select</type>
+                    <items type="array">
+                        <numIndex index="0" type="array">
+                            <numIndex index="0">LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.easing.none</numIndex>
+                            <numIndex index="1"></numIndex>
+                        </numIndex>
+                        <numIndex index="1" type="array">
+                            <numIndex index="0">swing</numIndex>
+                            <numIndex index="1">'swing'</numIndex>
+                        </numIndex>
+                        <numIndex index="2" type="array">
+                            <numIndex index="0">linear</numIndex>
+                            <numIndex index="1">'linear'</numIndex>
+                        </numIndex>
+                        <numIndex index="3" type="array">
+                            <numIndex index="0">easeInQuad</numIndex>
+                            <numIndex index="1">'easeInQuad'</numIndex>
+                        </numIndex>
+                        <numIndex index="4" type="array">
+                            <numIndex index="0">easeOutQuad</numIndex>
+                            <numIndex index="1">'easeOutQuad'</numIndex>
+                        </numIndex>
+                        <numIndex index="5" type="array">
+                            <numIndex index="0">easeInOutQuad</numIndex>
+                            <numIndex index="1">'easeInOutQuad'</numIndex>
+                        </numIndex>
+                        <numIndex index="6" type="array">
+                            <numIndex index="0">easeInCubic</numIndex>
+                            <numIndex index="1">'easeInCubic'</numIndex>
+                        </numIndex>
+                        <numIndex index="7" type="array">
+                            <numIndex index="0">easeOutCubic</numIndex>
+                            <numIndex index="1">'easeOutCubic'</numIndex>
+                        </numIndex>
+                        <numIndex index="8" type="array">
+                            <numIndex index="0">easeInOutCubic</numIndex>
+                            <numIndex index="1">'easeInOutCubic'</numIndex>
+                        </numIndex>
+                        <numIndex index="9" type="array">
+                            <numIndex index="0">easeInQuart</numIndex>
+                            <numIndex index="1">'easeInQuart'</numIndex>
+                        </numIndex>
+                        <numIndex index="10" type="array">
+                            <numIndex index="0">easeOutQuart</numIndex>
+                            <numIndex index="1">'easeOutQuart'</numIndex>
+                        </numIndex>
+                        <numIndex index="11" type="array">
+                            <numIndex index="0">easeInOutQuart</numIndex>
+                            <numIndex index="1">'easeInOutQuart'</numIndex>
+                        </numIndex>
+                        <numIndex index="12" type="array">
+                            <numIndex index="0">easeInQuint</numIndex>
+                            <numIndex index="1">'easeInQuint'</numIndex>
+                        </numIndex>
+                        <numIndex index="13" type="array">
+                            <numIndex index="0">easeOutQuint</numIndex>
+                            <numIndex index="1">'easeOutQuint'</numIndex>
+                        </numIndex>
+                        <numIndex index="14" type="array">
+                            <numIndex index="0">easeInOutQuint</numIndex>
+                            <numIndex index="1">'easeInOutQuint'</numIndex>
+                        </numIndex>
+                        <numIndex index="15" type="array">
+                            <numIndex index="0">easeInSine</numIndex>
+                            <numIndex index="1">'easeInSine'</numIndex>
+                        </numIndex>
+                        <numIndex index="16" type="array">
+                            <numIndex index="0">easeOutSine</numIndex>
+                            <numIndex index="1">'easeOutSine'</numIndex>
+                        </numIndex>
+                        <numIndex index="17" type="array">
+                            <numIndex index="0">easeInOutSine</numIndex>
+                            <numIndex index="1">'easeInOutSine'</numIndex>
+                        </numIndex>
+                        <numIndex index="18" type="array">
+                            <numIndex index="0">easeInExpo</numIndex>
+                            <numIndex index="1">'easeInExpo'</numIndex>
+                        </numIndex>
+                        <numIndex index="19" type="array">
+                            <numIndex index="0">easeOutExpo</numIndex>
+                            <numIndex index="1">'easeOutExpo'</numIndex>
+                        </numIndex>
+                        <numIndex index="20" type="array">
+                            <numIndex index="0">easeInOutExpo</numIndex>
+                            <numIndex index="1">'easeInOutExpo'</numIndex>
+                        </numIndex>
+                        <numIndex index="21" type="array">
+                            <numIndex index="0">easeInCirc</numIndex>
+                            <numIndex index="1">'easeInCirc'</numIndex>
+                        </numIndex>
+                        <numIndex index="22" type="array">
+                            <numIndex index="0">easeOutCirc</numIndex>
+                            <numIndex index="1">'easeOutCirc'</numIndex>
+                        </numIndex>
+                        <numIndex index="23" type="array">
+                            <numIndex index="0">easeInOutCirc</numIndex>
+                            <numIndex index="1">'easeInOutCirc'</numIndex>
+                        </numIndex>
+                        <numIndex index="24" type="array">
+                            <numIndex index="0">easeInElastic</numIndex>
+                            <numIndex index="1">'easeInElastic'</numIndex>
+                        </numIndex>
+                        <numIndex index="25" type="array">
+                            <numIndex index="0">easeOutElastic</numIndex>
+                            <numIndex index="1">'easeOutElastic'</numIndex>
+                        </numIndex>
+                        <numIndex index="26" type="array">
+                            <numIndex index="0">easeInOutElastic</numIndex>
+                            <numIndex index="1">'easeInOutElastic'</numIndex>
+                        </numIndex>
+                        <numIndex index="27" type="array">
+                            <numIndex index="0">easeInBack</numIndex>
+                            <numIndex index="1">'easeInBack'</numIndex>
+                        </numIndex>
+                        <numIndex index="28" type="array">
+                            <numIndex index="0">easeOutBack</numIndex>
+                            <numIndex index="1">'easeOutBack'</numIndex>
+                        </numIndex>
+                        <numIndex index="29" type="array">
+                            <numIndex index="0">easeInOutBack</numIndex>
+                            <numIndex index="1">'easeInOutBack'</numIndex>
+                        </numIndex>
+                        <numIndex index="30" type="array">
+                            <numIndex index="0">easeInBounce</numIndex>
+                            <numIndex index="1">'easeInBounce'</numIndex>
+                        </numIndex>
+                        <numIndex index="31" type="array">
+                            <numIndex index="0">easeOutBounce</numIndex>
+                            <numIndex index="1">'easeOutBounce'</numIndex>
+                        </numIndex>
+                        <numIndex index="32" type="array">
+                            <numIndex index="0">easeInOutBounce</numIndex>
+                            <numIndex index="1">'easeInOutBounce'</numIndex>
+                        </numIndex>
+                    </items>
+                </config>
+            </TCEforms>
+        </easing>
+        <start>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.start</label>
+                <config>
+                    <type>input</type>
+                    <size>5</size>
+                    <max>20</max>
+                    <eval>trim</eval>
+                </config>
+            </TCEforms>
+        </start>
+        <scroll>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.scroll</label>
+                <config>
+                    <type>input</type>
+                    <size>5</size>
+                    <max>20</max>
+                    <eval>trim</eval>
+                </config>
+            </TCEforms>
+        </scroll>
+        <visible>
+            <TCEforms>
+				<exclude>1</exclude>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.visible</label>
+                <config>
+                    <type>input</type>
+                    <size>5</size>
+                    <max>20</max>
+                    <eval>trim</eval>
+                </config>
+            </TCEforms>
+        </visible>
+        <vertical>
+            <TCEforms>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.vertical</label>
+                <config>
+                    <type>select</type>
+                    <items type="array">
+                        <numIndex index="0" type="array">
+                            <numIndex index="0">-</numIndex>
+                            <numIndex index="1"></numIndex>
+                        </numIndex>
+                        <numIndex index="1" type="array">
+                            <numIndex index="0">LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.false</numIndex>
+                            <numIndex index="1">false</numIndex>
+                        </numIndex>
+                        <numIndex index="2" type="array">
+                            <numIndex index="0">LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.true</numIndex>
+                            <numIndex index="1">true</numIndex>
+                        </numIndex>
+                    </items>
+                </config>
+            </TCEforms>
+        </vertical>
+        <rtl>
+            <TCEforms>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.rtl</label>
+                <config>
+                    <type>select</type>
+                    <items type="array">
+                        <numIndex index="0" type="array">
+                            <numIndex index="0">-</numIndex>
+                            <numIndex index="1"></numIndex>
+                        </numIndex>
+                        <numIndex index="1" type="array">
+                            <numIndex index="0">LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.false</numIndex>
+                            <numIndex index="1">false</numIndex>
+                        </numIndex>
+                        <numIndex index="2" type="array">
+                            <numIndex index="0">LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.true</numIndex>
+                            <numIndex index="1">true</numIndex>
+                        </numIndex>
+                    </items>
+                </config>
+            </TCEforms>
+        </rtl>
+        <dynamic>
+            <TCEforms>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.dynamic</label>
+                <config>
+                    <type>select</type>
+                    <items type="array">
+                        <numIndex index="0" type="array">
+                            <numIndex index="0">-</numIndex>
+                            <numIndex index="1"></numIndex>
+                        </numIndex>
+                        <numIndex index="1" type="array">
+                            <numIndex index="0">LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.false</numIndex>
+                            <numIndex index="1">false</numIndex>
+                        </numIndex>
+                        <numIndex index="2" type="array">
+                            <numIndex index="0">LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.true</numIndex>
+                            <numIndex index="1">true</numIndex>
+                        </numIndex>
+                    </items>
+                </config>
+            </TCEforms>
+        </dynamic>
+       </el>
+     </ROOT>
+    </sJCAROUSEL>
+  </sheets>
+</T3DataStructure>

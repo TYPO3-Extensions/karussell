@@ -1,0 +1,3 @@
+Button images copyright by Microsoft Corporation (http://microsoft.com)
+and
+http://jquerytools.org/demos/scrollable/index.html

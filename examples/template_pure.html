@@ -1,0 +1,38 @@
+<html>
+<body>
+<p>Infinite Karussell-Template from http://jqueryfordesigners.com/jquery-infinite-carousel/</p>
+<p>Test it with this TypoScript:</p>
+<pre>
+plugin.tx_karussell_pi1 {
+  templateFile = EXT:karussell/examples/template_pure.html
+  styleFile = EXT:karussell/examples/style_pure.css
+  jsFile = EXT:karussell/examples/javascript_pure.js
+}
+</pre>
+<p>Note: customise the JS and CSS-file too!</p>
+
+<!-- ###TEMPLATE_GLOBAL#### begin -->
+<div class="infiniteCarousel"> 
+<div class="wrapper"> 
+ <ul>
+  ###ITEMS###
+ </ul>
+</div>
+</div>
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+<!-- ###TEMPLATE_ITEM#### begin -->
+<li>
+	<div style="background: url(###IMAGE###) no-repeat;" class="hinter">
+		<div class="vorder">
+			<h2>###TITLE###</h2>
+			<p>###CONTENT### ###LINKTAG###</p>
+		</div>
+	</div>
+</li>
+<!-- ###TEMPLATE_ITEM#### end -->
+
+
+</body>
+</html>

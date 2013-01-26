@@ -1,0 +1,49 @@
+.jcarousel-skin-ie7 .jcarousel-container {
+    padding:0 5px;
+	margin:0;
+}
+
+.jcarousel-skin-ie7 .jcarousel-container-horizontal {
+    width: 205px;
+    height: 295px;
+}
+
+.jcarousel-skin-ie7 .jcarousel-container-vertical {
+    width: 205px;
+    height: 295px;
+}
+
+.jcarousel-skin-ie7 .jcarousel-clip-horizontal {
+    width:  195px;
+    height: 295px;
+}
+
+.jcarousel-skin-ie7 .jcarousel-clip-vertical {
+    width:  195px;
+    height: 295px;
+}
+
+.jcarousel-skin-ie7 .jcarousel-item {
+    width: 195px;
+    height: 295px;
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-ie7 .jcarousel-next-horizontal {
+    display:none;
+}
+.jcarousel-skin-ie7 .jcarousel-prev-horizontal {
+    display:none;
+}
+
+/**
+ *  Vertical Buttons
+ */
+.jcarousel-skin-ie7 .jcarousel-next-vertical {
+    display:none;
+}
+.jcarousel-skin-ie7 .jcarousel-prev-vertical {
+    display:none;
+}
