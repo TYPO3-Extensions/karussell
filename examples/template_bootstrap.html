@@ -1,0 +1,52 @@
+<html>
+<body>
+<p>Bootstrap Karussell-Template</p>
+<p>Note: you need Bootstrap for this example. Download it from here:
+http://twitter.github.com/bootstrap/
+Copy the JS- and CSS-file into your fileadmin-folder!
+Or better: install a Bootstrap extension and you are done!
+Test it with (the Bootstrap CSS- and JS-file and) this TypoScript:</p>
+<pre>
+plugin.tx_karussell_pi1 {
+  styleFile = 
+  jsFile =
+  templateFile = EXT:karussell/examples/template_bootstrap.html
+  fimila = class="active item"|class="item"|class="item"
+}
+</pre>
+
+
+<!-- ###TEMPLATE_GLOBAL#### begin -->
+<script type="text/javascript">
+/*<![CDATA[*/
+  $(document).ready(function() {
+	  $('.carousel').carousel();
+  });
+/*]]>*/
+</script>
+
+<div id="myCarousel" class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+	###ITEMS###
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+<!-- ###TEMPLATE_ITEM#### begin -->
+ <div ###FIMILA###>
+  <img src="###IMAGE###" alt="###TITLE###" title="" />
+  <div class="carousel-caption">
+    <h4>###TITLE###</h4>
+    <p>###CONTENT### ###LINKTAG###</p>
+  </div>
+ </div>
+<!-- ###TEMPLATE_ITEM#### end -->
+
+
+</body>
+</html>

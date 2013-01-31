@@ -10,11 +10,11 @@
       <label index="flexform.sheets.general.templateFile">Template file:</label>
       <label index="flexform.sheets.general.styleFile">CSS file:</label>
       <label index="flexform.sheets.general.jsFile">JavaScript file:</label>
-      <label index="flexform.sheets.general.table">Table name (e.g. tt_news):</label>
-      <label index="flexform.sheets.general.searchFieldList">Search field list (e.g. title,short,image,links):</label>
-      <label index="flexform.sheets.general.andWhere">Where-statement (e.g. AND sys_language_uid=###LANG_UID###):</label>
-      <label index="flexform.sheets.general.sort">Sort by (e.g. datetime:DESC):</label>
-      <label index="flexform.sheets.general.foreignSelect">Select at an foreign table:</label>
+      <label index="flexform.sheets.general.table">Table name: e.g. tt_news</label>
+      <label index="flexform.sheets.general.searchFieldList">Search field list: e.g. title,short,image,links</label>
+      <label index="flexform.sheets.general.andWhere">Where-statement: e.g. AND sys_language_uid=###LANG_UID###</label>
+      <label index="flexform.sheets.general.sort">Sort by: e.g. datetime:DESC</label>
+      <label index="flexform.sheets.general.foreignSelect">Select at an foreign table: example see in the documention</label>
       <label index="flexform.sheets.general.parameterUID">Parameter for the UID (e.g. tx_ttnews[tt_news]):</label>
       <label index="flexform.sheets.general.destinationPID">Destination of links:</label>
       <label index="flexform.sheets.general.results_at_a_time">No. of total elements to show:</label>
@@ -22,7 +22,7 @@
       <label index="flexform.sheets.general.linkText">Text for the link-tag:</label>
       <label index="flexform.sheets.general.disableControl">Disable control-elements (e.g. thumbnails):</label>
       <label index="flexform.sheets.images.title">Images</label>
-      <label index="flexform.sheets.images.dirName">Directory name in the "uploads" folder:</label>
+      <label index="flexform.sheets.images.dirName">Directory name in the "uploads" folder: e.g. pics</label>
       <label index="flexform.sheets.images.maxW">Max. width:</label>
       <label index="flexform.sheets.images.maxH">Max. height:</label>
       <label index="flexform.sheets.images.maxWthumb">Max. width (thumbnails):</label>
@@ -52,11 +52,11 @@
       <label index="flexform.sheets.general.templateFile">Template-Datei:</label>
       <label index="flexform.sheets.general.styleFile">CSS-Datei:</label>
       <label index="flexform.sheets.general.jsFile">JavaScript-Datei:</label>
-      <label index="flexform.sheets.general.table">Name der Tabelle (z.B. tt_news):</label>
-      <label index="flexform.sheets.general.searchFieldList">Suchfeld-Liste (z.B.: title,short,image,links):</label>
-      <label index="flexform.sheets.general.andWhere">Where-Statement (z.B. AND sys_language_uid=###LANG_UID###):</label>
-      <label index="flexform.sheets.general.sort">Sortieren nach (z.B. datetime:DESC):</label>
-      <label index="flexform.sheets.general.foreignSelect">Select aus einer Zusatztabelle:</label>
+      <label index="flexform.sheets.general.table">Name der Tabelle: z.B. tt_news</label>
+      <label index="flexform.sheets.general.searchFieldList">Suchfeld-Liste: z.B. title,short,image,links</label>
+      <label index="flexform.sheets.general.andWhere">Where-Statement: z.B. AND sys_language_uid=###LANG_UID###</label>
+      <label index="flexform.sheets.general.sort">Sortieren nach: Z.B. datetime:DESC</label>
+      <label index="flexform.sheets.general.foreignSelect">Select aus einer Zusatztabelle: Beispiel siehe in der Doku</label>
       <label index="flexform.sheets.general.parameterUID">Parameter für die UID (z.B. tx_ttnews[tt_news]):</label>
       <label index="flexform.sheets.general.destinationPID">Zielseite der Links:</label>
       <label index="flexform.sheets.general.results_at_a_time">Max. Anzahl der zu zeigenden Elemente:</label>
@@ -64,7 +64,7 @@
       <label index="flexform.sheets.general.linkText">Text für das a-href-Tag:</label>
       <label index="flexform.sheets.general.disableControl">Control-Elemente (z.B. Thumbnails) abschalten:</label>
       <label index="flexform.sheets.images.title">Bilder</label>
-      <label index="flexform.sheets.images.dirName">Verzeichnis-Namen in dem Ordner "uploads":</label>
+      <label index="flexform.sheets.images.dirName">Verzeichnis-Namen in dem Ordner "uploads": Z.B. pics</label>
       <label index="flexform.sheets.images.maxW">Max. Breite:</label>
       <label index="flexform.sheets.images.maxH">Max. Höhe:</label>
       <label index="flexform.sheets.images.maxWthumb">Max. Breite der Thumbnails:</label>
@@ -94,10 +94,10 @@
       <label index="flexform.sheets.general.templateFile">Fichier de modèle</label>
       <label index="flexform.sheets.general.styleFile">Fichier de CSS:</label>
       <label index="flexform.sheets.general.jsFile">Fichier de JavaScript:</label>
-      <label index="flexform.sheets.general.table">Nom de la table (par exemple: tt_news):</label>
-      <label index="flexform.sheets.general.searchFieldList">Liste des champs de recherche (par exemple: title,short,image,links):</label>
-      <label index="flexform.sheets.general.andWhere">Where déclaration (par example: AND sys_language_uid=###LANG_UID###):</label>
-      <label index="flexform.sheets.general.sort">Trier par (par exemple: datetime:DESC):</label>
+      <label index="flexform.sheets.general.table">Nom de la table: par exemple tt_news</label>
+      <label index="flexform.sheets.general.searchFieldList">Liste des champs de recherche: par exemple title,short,image,links</label>
+      <label index="flexform.sheets.general.andWhere">Where déclaration: par example AND sys_language_uid=###LANG_UID###</label>
+      <label index="flexform.sheets.general.sort">Trier par: par exemple datetime:DESC</label>
       <label index="flexform.sheets.general.foreignSelect">Sélectionnez une table à l'étranger:</label>
       <label index="flexform.sheets.general.parameterUID">Paramètre pour l'UID (par exemple: tx_ttnews[tt_news]):</label>
       <label index="flexform.sheets.general.destinationPID">Destination des liens:</label>
@@ -106,7 +106,7 @@
       <label index="flexform.sheets.general.linkText">Texte du lien-tag:</label>
       <label index="flexform.sheets.general.disableControl">Désactiver le contrôle-éléments (par exemple les vignettes):</label>
       <label index="flexform.sheets.images.title">Images</label>
-      <label index="flexform.sheets.images.dirName">Le nom du répertoire dans le dossier "uploads":</label>
+      <label index="flexform.sheets.images.dirName">Le nom du répertoire dans le dossier "uploads": par example pics</label>
       <label index="flexform.sheets.images.maxW">Largeur maximale:</label>
       <label index="flexform.sheets.images.maxH">Hauteur maximale:</label>
       <label index="flexform.sheets.images.maxWthumb">Largeur maximale (les vignettes):</label>
@@ -140,10 +140,10 @@
       <label index="flexform.sheets.general.templateFile">File di modello:</label>
       <label index="flexform.sheets.general.styleFile">File di CSS:</label>
       <label index="flexform.sheets.general.jsFile">File de JavaScript:</label>
-      <label index="flexform.sheets.general.table">Tabella nome (ad esempio: tt_news):</label>
-      <label index="flexform.sheets.general.searchFieldList">Elenco dei campi di ricerca (ad esempio: title,short,image,links):</label>
-      <label index="flexform.sheets.general.andWhere">Where dichiarazione (ad esempio: AND sys_language_uid=###LANG_UID###):</label>
-      <label index="flexform.sheets.general.sort">Ordina per (ad esempio: datetime:DESC):</label>
+      <label index="flexform.sheets.general.table">Tabella nome: ad esempio tt_news</label>
+      <label index="flexform.sheets.general.searchFieldList">Elenco dei campi di ricerca: ad esempio title,short,image,links</label>
+      <label index="flexform.sheets.general.andWhere">Where dichiarazione: ad esempio AND sys_language_uid=###LANG_UID###</label>
+      <label index="flexform.sheets.general.sort">Ordina per: ad esempio datetime:DESC</label>
       <label index="flexform.sheets.general.foreignSelect">Selezionate in una tabella esterna:</label>
       <label index="flexform.sheets.general.parameterUID">Parametro per l'UID (ad esempio: tx_ttnews[tt_news]):</label>
       <label index="flexform.sheets.general.destinationPID">Destinazione dei collegamenti:</label>
@@ -152,7 +152,7 @@
       <label index="flexform.sheets.general.linkText">Testo per il link-tag:</label>
       <label index="flexform.sheets.general.disableControl">Disabilitare il controllo-elementi (ad es miniature):</label>
       <label index="flexform.sheets.images.title">Immagini</label>
-      <label index="flexform.sheets.images.dirName">Nome della directory nella cartella di "uploads":</label>
+      <label index="flexform.sheets.images.dirName">Nome della directory nella cartella di "uploads": ad esempio pics</label>
       <label index="flexform.sheets.images.maxW">Larghezza massima:</label>
       <label index="flexform.sheets.images.maxH">Altezza massima:</label>
       <label index="flexform.sheets.images.maxWthumb">Larghezza massima (es miniature):</label>
@@ -182,10 +182,10 @@
       <label index="flexform.sheets.general.templateFile">Plantilla de archivo:</label>
       <label index="flexform.sheets.general.styleFile">Plantilla de CSS:</label>
       <label index="flexform.sheets.general.jsFile">Plantilla de JavaScript:</label>
-      <label index="flexform.sheets.general.table">Nombre de la tabla (por ejemplo: tt_news):</label>
-      <label index="flexform.sheets.general.searchFieldList">Lista de campos de búsqueda (por ejemplo: title,short,image,links):</label>
-      <label index="flexform.sheets.general.andWhere">Where declaración (por ejemplo: AND sys_language_uid=###LANG_UID###):</label>
-      <label index="flexform.sheets.general.sort">Ordenar por (por ejemplo: datetime:DESC):</label>
+      <label index="flexform.sheets.general.table">Nombre de la tabla: por ejemplo tt_news</label>
+      <label index="flexform.sheets.general.searchFieldList">Lista de campos de búsqueda: por ejemplo title,short,image,links</label>
+      <label index="flexform.sheets.general.andWhere">Where declaración: por ejemplo AND sys_language_uid=###LANG_UID###</label>
+      <label index="flexform.sheets.general.sort">Ordenar por: por ejemplo datetime:DESC</label>
       <label index="flexform.sheets.general.foreignSelect">Seleccionar a una tabla externa:</label>
       <label index="flexform.sheets.general.parameterUID">Parámetro para la UID (por ejemplo: tx_ttnews[tt_news]):</label>
       <label index="flexform.sheets.general.destinationPID">Destino de los enlaces:</label>
@@ -194,7 +194,7 @@
       <label index="flexform.sheets.general.linkText">El texto para el enlace de etiquetas::</label>
       <label index="flexform.sheets.general.disableControl">Desactivar el control de los elementos (por ejemplo, imágenes en miniatura):</label>
       <label index="flexform.sheets.images.title">Imágenes</label>
-      <label index="flexform.sheets.images.dirName">Nombre de directorio en la carpeta "uploads":</label>
+      <label index="flexform.sheets.images.dirName">Nombre de directorio en la carpeta "uploads": por ejemplo pics</label>
       <label index="flexform.sheets.images.maxW">Ancho máximo:</label>
       <label index="flexform.sheets.images.maxH">Altura máxima:</label>
       <label index="flexform.sheets.images.maxWthumb">Ancho máximo (imágenes en miniatura):</label>
@@ -242,10 +242,10 @@
       <label index="flexform.sheets.general.templateFile">Format fişier:</label>
       <label index="flexform.sheets.general.styleFile">Format CSS:</label>
       <label index="flexform.sheets.general.jsFile">Format JavaScript:</label>
-      <label index="flexform.sheets.general.table">Tabelul nume (de exemplu: tt_news):</label>
-      <label index="flexform.sheets.general.searchFieldList">Domeniul lista de căutare (de exemplu: title,short,image,links):</label>
-      <label index="flexform.sheets.general.andWhere">Where declaraţie (de exemplu: AND sys_language_uid=###LANG_UID###):</label>
-      <label index="flexform.sheets.general.sort">Sortare după (de exemplu: datetime:DESC):</label>
+      <label index="flexform.sheets.general.table">Tabelul nume: de exemplu tt_news</label>
+      <label index="flexform.sheets.general.searchFieldList">Domeniul lista de căutare: de exemplu title,short,image,links</label>
+      <label index="flexform.sheets.general.andWhere">Where declaraţie: de exemplu AND sys_language_uid=###LANG_UID###</label>
+      <label index="flexform.sheets.general.sort">Sortare după: de exemplu datetime:DESC</label>
       <label index="flexform.sheets.general.foreignSelect">Selectaţi la o masă străină:</label>
       <label index="flexform.sheets.general.parameterUID">Parametru pentru UID (de exemplu: tx_ttnews[tt_news]):</label>
       <label index="flexform.sheets.general.destinationPID">Destinaţie de link-uri:</label>
@@ -254,7 +254,7 @@
       <label index="flexform.sheets.general.linkText">Text pentru link-ul tag-ul:</label>
       <label index="flexform.sheets.general.disableControl">Dezactivează control-elemente (de exemplu, miniaturi):</label>
       <label index="flexform.sheets.images.title">Imagini</label>
-      <label index="flexform.sheets.images.dirName">Nume de director în folderul "uploads":</label>
+      <label index="flexform.sheets.images.dirName">Nume de director în folderul "uploads": de exemplu pics</label>
       <label index="flexform.sheets.images.maxW">Lăţime maximă:</label>
       <label index="flexform.sheets.images.maxH">Înălţimea maximă:</label>
       <label index="flexform.sheets.images.maxWthumb">Lăţime maximă (miniaturi):</label>

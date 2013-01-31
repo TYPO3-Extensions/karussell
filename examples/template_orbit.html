@@ -1,0 +1,36 @@
+<html>
+<body>
+<p>Foundation-Orbit Slider-Template</p>
+<p>You need the Foundation-Orbit-Slider from here:
+http://foundation.zurb.com/docs/orbit.php
+Copy the JavaScript and CSS from there to your fileadmin-folder!!!
+Test it with:</p>
+<pre>
+plugin.tx_karussell_pi1 {
+  styleFile = fileadmin/template/foundation/stylesheets/foundation.css
+  jsFile = fileadmin/template/foundation/javascripts/jquery.foundation.orbit.js
+  templateFile = EXT:karussell/examples/template_orbit.html
+}
+</pre>
+
+
+<!-- ###TEMPLATE_GLOBAL#### begin -->
+<div id="featured">
+###ITEMS###
+</div>
+<script type="text/javascript">
+   $(window).load(function() {
+     $("#featured").orbit({
+    	  animation: 'fade'                  // fade, horizontal-slide, vertical-slide, horizontal-push ...
+     });
+   });
+</script>
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+<!-- ###TEMPLATE_ITEM#### begin -->
+  <img src="###IMAGE###" alt="###TITLE###" title="" />
+<!-- ###TEMPLATE_ITEM#### end -->
+
+</body>
+</html>

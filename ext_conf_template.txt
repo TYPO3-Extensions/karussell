@@ -1,0 +1,17 @@
+# cat=basic//; type=string; label=LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.table
+table =
+
+# cat=basic//; type=string; label=LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.searchFieldList
+searchFieldList =
+
+# cat=basic//; type=string; label=LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.andWhere
+andWhere =
+
+# cat=basic//; type=string; label=LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.sort
+sort =
+
+# cat=basic//; type=string; label=LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.foreignSelect
+foreignSelect =
+
+# cat=basic//; type=string; label=LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.images.dirName
+dirName =
