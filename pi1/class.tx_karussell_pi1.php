@@ -41,13 +41,15 @@ class tx_karussell_pi1 extends tslib_pibase {
     public $conf_template = array();
     public $use_conf_template = false;
     protected $templateCode = '';
-    protected $table = '';                    // table
+    protected $allowedTables = 'tx_karussell_inhalt,tt_content,tt_news*,pages*,tx_mvcooking*,tx_irfaq*,tx_myquizpoll*,tx_cmwlinklist*,tx_srsendcard*';                    // table
+    protected $table = '';					// table
     protected $searchFieldList = '';        // fields
+    protected $foreignSelect = '';			// foreign-select
     protected $dirName = '';                // directory name in the uploads-folder
-    protected $lang = '';                    // language uid
-    protected $start = 0;                    // start-tag: 1=mo, 7=so
-    protected $writeDevLog = false;            // Debug aktiv?
-    protected $showUid = 0;                    // Uebergabe-Parameter fuer Where
+    protected $lang = '';					// language uid
+    protected $start = 0;					// start-tag: 1=mo, 7=so
+    protected $writeDevLog = false;			// Debug aktiv?
+    protected $showUid = 0;					// Uebergabe-Parameter fuer Where
     
     /**
      * Main method of your PlugIn
@@ -68,6 +70,7 @@ class tx_karussell_pi1 extends tslib_pibase {
         // GETTING configuration for the extension:
         $this->conf_template = unserialize($GLOBALS["TYPO3_CONF_VARS"]["EXT"]["extConf"]["karussell"]);
         if ($this->conf_template['table']!='') $this->use_conf_template = true;
+        if ($this->conf_template['allowedTables']!='') $this->allowedTables = $this->conf_template['allowedTables'];
         
         // $this->pidList = $this->pi_getPidList($this->cObj->data['pages'],$this->conf['recursive']);
         if (!$this->conf['pidList']) {
@@ -118,10 +121,15 @@ class tx_karussell_pi1 extends tslib_pibase {
         if (TYPO3_DLOG || $this->conf['debug']) $this->writeDevLog = TRUE;
         
         if ($this->conf['table'] && $this->conf['searchFieldList']) {
-            $this->table = ($this->use_conf_template) ? addslashes($this->conf_template['table']) : addslashes($this->conf['table']);
-            $this->searchFieldList = ($this->use_conf_template) ? addslashes($this->conf_template['searchFieldList']) : addslashes($this->conf['searchFieldList']);
+            $this->table = ($this->use_conf_template) ? $this->conf_template['table'] : 
+            											$this->checkTable($this->conf['table'], true);	// security check
+        	if ($this->table=='') return 'illegal table in sql query!';
+            $this->searchFieldList = ($this->use_conf_template) ? $this->conf_template['searchFieldList'] : 
+            													  $this->checkSQLstring($this->conf['searchFieldList'], true);	// security check
+            if ($this->searchFieldList=='') return 'illegal fields in sql query!';
             $this->searchFieldList = $this->table.'.uid,'.$this->searchFieldList;
-            $this->dirName = ($this->use_conf_template) ? $this->conf_template['dirName'] : $this->conf['images.']['dirName'];
+        	$this->dirName = ($this->use_conf_template) ? $this->conf_template['dirName'] : 
+            											  $this->conf['images.']['dirName'];
         } else {
             $this->table = 'tx_karussell_inhalt';
             $this->searchFieldList = 'uid,titel,meldung,bild,link';
@@ -147,8 +155,9 @@ class tx_karussell_pi1 extends tslib_pibase {
             t3lib_utility_VersionNumber::convertVersionNumberToInteger(TYPO3_version) : t3lib_div::int_from_ver(TYPO3_version);
         
             // Initializing the query parameters:
-        $sort = ($this->use_conf_template) ? addslashes($this->conf_template['sort']) : addslashes($this->conf['sort']);
-        if ($sort != 'rand()') {
+        $sort = ($this->use_conf_template) ? $this->conf_template['sort'] : 
+        									 $this->checkSQLstring($this->conf['sort'], true);	// security check
+        if ($sort && $sort != 'rand()') {
             list($this->internal['orderBy'],$this->internal['descFlag']) = explode(':', $sort);
             if (!$this->internal['orderBy']) $this->internal['orderBy'] = 'tstamp';
             $this->internal['descFlag'] = (strtoupper($this->internal['descFlag']) == 'ASC') ? false : true;
@@ -165,20 +174,48 @@ class tx_karussell_pi1 extends tslib_pibase {
         $this->internal['searchFieldList']=$this->searchFieldList;
         
             // Get number of records:
-        $andWhere = ($this->use_conf_template) ? $this->conf_template['andWhere'] : $this->conf['andWhere'];
+        $andWhere = ($this->use_conf_template) ? $this->conf_template['andWhere'] : 
+        										 $this->conf['andWhere'];
         if ($andWhere) {
             $andWhere = preg_replace("/###LANG_UID###/s", $this->lang, $andWhere);
             $andWhere = preg_replace("/###PARAM_UID###/s", $this->showUid, $andWhere);
             $andWhere = preg_replace("/###UID###/s", $GLOBALS['TSFE']->id, $andWhere);
             $andWhere = preg_replace("/###PID###/s", $GLOBALS['TSFE']->page['pid'], $andWhere);
+            $andWhere = $this->checkSQLstring($andWhere, false);	// security check
+        	if ($andWhere=='') return 'illegal where in sql query!';
         }
         if ($sort == 'rand()') {
             $andWhere .= ' ORDER BY rand()';
         }
-        if (strpos($andWhere, 'fe_users')>0 || strpos($andWhere, 'be_users')>0 || strpos($andWhere, 'be_sessions')>0) return 'illegal table in sql query!';
-        if ($this->table=='fe_users' || $this->table=='be_users' || $this->table=='be_sessions') return 'illegal table in sql query!';
-//        $res = $this->pi_exec_query($this->table,1,$andWhere);
-//        list($this->internal['res_count']) = $GLOBALS['TYPO3_DB']->sql_fetch_row($res);
+        
+        $this->foreignSelect = ($this->use_conf_template) ? $this->conf_template['foreignSelect'] : $this->conf['foreignSelect'];
+        if ($this->foreignSelect && !$this->use_conf_template) {	// security check
+        	// split the foreign select statement!
+			require_once(t3lib_extMgm::extPath('karussell').'pi1/class.tx_karussell_pi1_SqlParser.php');
+			$sqlParser = t3lib_div::makeInstance('tx_karussell_pi1_SqlParser');
+			$sqlParser->ParseString($this->foreignSelect);
+			$foreignQueryArray[0] = $this->checkSQLstring(trim(substr($sqlParser->getSelectStatement(),6)), false);
+            $foreignQueryArray[1] = trim(substr($sqlParser->getFromStatement(),4));
+        	$foreignQueryArray[2] = trim(substr($sqlParser->getWhereStatement(),5));
+        	$foreignQueryArray[3] = trim(substr($sqlParser->getLimitStatement(),5));
+			if ($foreignQueryArray[0]=='') return 'illegal fields in foreign sql query!';
+			foreach (explode(',', $foreignQueryArray[1]) as $oneTable) {
+				$oneTable_checked = $this->checkTable($oneTable, false);
+      		  	if ($oneTable_checked=='') return 'illegal table in foreign sql query: '.$oneTable;
+			}
+      		// select neu zusammensetzen
+        	$this->foreignSelect = 'SELECT '.$foreignQueryArray[0].' FROM '.$foreignQueryArray[1];
+        	if ($foreignQueryArray[2]) {
+        		$foreignQueryArray[2] = $this->checkSQLstring($foreignQueryArray[2], false);
+	        	if ($foreignQueryArray[2]=='') return 'illegal where in foreign sql query!';
+        		$this->foreignSelect .= ' WHERE '.$foreignQueryArray[2];
+        	}
+        	if ($foreignQueryArray[3]) {
+        		$this->foreignSelect .= ' LIMIT '.intval($foreignQueryArray[3]);
+        	}
+        }
+		//$res = $this->pi_exec_query($this->table,1,$andWhere);
+		//list($this->internal['res_count']) = $GLOBALS['TYPO3_DB']->sql_fetch_row($res);
         
             // Make listing query, pass query to SQL database:
         $res = $this->pi_exec_query($this->table,0,$andWhere);
@@ -209,8 +246,8 @@ class tx_karussell_pi1 extends tslib_pibase {
         $dynamic = ($temp=='true' || $temp==1) ? true : false;
     
         $markerArray=array();
-        $markerArray['###UID###'] = $this->cObj->data['uid'];
-        $markerArray['###MAX###'] = $this->internal['res_count'];
+        $markerArray['###UID###'] = intval($this->cObj->data['uid']);
+        $markerArray['###MAX###'] = intval($this->internal['res_count']);
         $markerArray['###ITEMS###'] = $this->pi_list_makelist($res,$dynamic,false);
         $markerArray['###CONTROL###'] = ($this->conf['disableControl']) ? '' : $this->pi_list_makelist($res,false,true);
         if (strpos($this->templateCode, '###ITEMS2###'))
@@ -409,10 +446,9 @@ class tx_karussell_pi1 extends tslib_pibase {
             if (count($myFields)>0) {
                 for ($i=0; $i<count($myFields); $i++) $markerArray['###LOCAL_'.strtoupper($myFields[$i]).'###'] = $this->getFieldContent($myFields[$i],$isJS);
             }
-            $foreignSelect = ($this->use_conf_template) ? $this->conf_template['foreignSelect'] : $this->conf['foreignSelect'];
-            if ($foreignSelect) {
-                $query = $this->cObj->substituteMarkerArray($foreignSelect, $markerArray);
-                if (strpos($query, 'fe_users')>0 || strpos($query, 'be_users')>0 || strpos($query, 'be_sessions')>0) return 'illegal table in sql query!';
+            if ($this->foreignSelect) {	// foreign select?
+            	// complete the query
+                $query = $this->cObj->substituteMarkerArray($this->foreignSelect, $markerArray);
                 // da das bloede Select nur Zahlen, statt Namen zurueckliefert, muss man die noch parsen
                 $pos_from = strpos(strtoupper($query), 'FROM');
                 $fields = trim(substr($query,7,$pos_from-7));
@@ -609,11 +645,59 @@ class tx_karussell_pi1 extends tslib_pibase {
         return $this->pi_wrapInBaseClass($content);
       }
     }
+    
+    /**
+     * Checks, if a table is allowed
+     *
+     * @param	string	$table
+     * @param	boolean	$clean	clean up the string?
+     * @return	string	allowed table
+     */
+    protected function checkTable($table, $clean) {
+    	$allowedTablesArray = explode(',', $this->allowedTables);
+    	$allowedTable = '';
+    	$table = trim($table);
+    	foreach ($allowedTablesArray as $value) {
+    		if ($table==trim($value)) {
+    			// e.g. "tt_content" == "tt_content"
+    			$allowedTable=$table;
+    			break;
+    		} else if ((strpos($value, '*')>1) && (strpos($table, rtrim(trim($value),'*'))===0)) {
+    			// e.g. "tx_myquizpoll"* is in "tx_myquizpoll_result" at position 0
+    			$allowedTable=$table;
+    			break;
+    		} else if (!$clean) {
+    			$tableArray = explode(' ',$table);
+    			if (trim($tableArray[0]) == trim($value) && count($tableArray)<=3) {
+    				// e.g. "tt_news_cat" is in "tt_news_cat AS cat" at position 0
+    				$allowedTable=$table;
+    				break;
+    			}
+    		}
+    	}
+    	return $this->checkSQLstring($allowedTable, $clean);
+    }
+    
+    /**
+     * Checks, if the string is OK
+     *
+     * @param	string	$check	string to be checked
+     * @param	boolean	$clean	clean up the string?
+     * @return	string	allowed SQL-string
+     */
+    protected function checkSQLstring($check, $clean) {
+    	if (preg_match('/fe_users/i', $check) || preg_match('/be_users/i', $check) || preg_match('/be_sessions/i', $check) || 
+    		preg_match('/insert /i', $check) || preg_match('/update /i', $check) || preg_match('/delete /i', $check) || preg_match('/select /i', $check)) 
+    		return '';
+    	else if ($clean)
+    		return str_replace(' ','',addslashes($check));
+    	else
+    		return $check;
+    }
 }
 
 
 if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/karussell/pi1/class.tx_karussell_pi1.php'])    {
     include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/karussell/pi1/class.tx_karussell_pi1.php']);
 }
-
 ?>

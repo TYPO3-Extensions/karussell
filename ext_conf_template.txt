@@ -1,3 +1,6 @@
+# cat=basic//; type=string; label=LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.allowedTables
+allowedTables = tx_karussell_inhalt,tt_content,tt_news*,pages*,tx_mvcooking*,tx_irfaq*,tx_myquizpoll*,tx_cmwlinklist*,tx_srsendcard*
+
 # cat=basic//; type=string; label=LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.table
 table =
 

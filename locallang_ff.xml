@@ -11,6 +11,7 @@
       <label index="flexform.sheets.general.styleFile">CSS file:</label>
       <label index="flexform.sheets.general.jsFile">JavaScript file:</label>
       <label index="flexform.sheets.general.table">Table name: e.g. tt_news</label>
+      <label index="flexform.sheets.general.allowedTables">Allowed db-tables: fill out this field or the next fields</label>
       <label index="flexform.sheets.general.searchFieldList">Search field list: e.g. title,short,image,links</label>
       <label index="flexform.sheets.general.andWhere">Where-statement: e.g. AND sys_language_uid=###LANG_UID###</label>
       <label index="flexform.sheets.general.sort">Sort by: e.g. datetime:DESC</label>
@@ -53,6 +54,7 @@
       <label index="flexform.sheets.general.styleFile">CSS-Datei:</label>
       <label index="flexform.sheets.general.jsFile">JavaScript-Datei:</label>
       <label index="flexform.sheets.general.table">Name der Tabelle: z.B. tt_news</label>
+      <label index="flexform.sheets.general.allowedTables">Erlaubte DB-Tabellen: fülle dieses oder die nächsten Felder aus!</label>
       <label index="flexform.sheets.general.searchFieldList">Suchfeld-Liste: z.B. title,short,image,links</label>
       <label index="flexform.sheets.general.andWhere">Where-Statement: z.B. AND sys_language_uid=###LANG_UID###</label>
       <label index="flexform.sheets.general.sort">Sortieren nach: Z.B. datetime:DESC</label>
@@ -95,6 +97,7 @@
       <label index="flexform.sheets.general.styleFile">Fichier de CSS:</label>
       <label index="flexform.sheets.general.jsFile">Fichier de JavaScript:</label>
       <label index="flexform.sheets.general.table">Nom de la table: par exemple tt_news</label>
+      <label index="flexform.sheets.general.allowedTables">Admis db-tables: remplissez pas ce champ ou les champs suivants</label>
       <label index="flexform.sheets.general.searchFieldList">Liste des champs de recherche: par exemple title,short,image,links</label>
       <label index="flexform.sheets.general.andWhere">Where déclaration: par example AND sys_language_uid=###LANG_UID###</label>
       <label index="flexform.sheets.general.sort">Trier par: par exemple datetime:DESC</label>
@@ -141,6 +144,7 @@
       <label index="flexform.sheets.general.styleFile">File di CSS:</label>
       <label index="flexform.sheets.general.jsFile">File de JavaScript:</label>
       <label index="flexform.sheets.general.table">Tabella nome: ad esempio tt_news</label>
+      <label index="flexform.sheets.general.allowedTables">Ammessi db-tabelle: compilare questo campo o dei campi successivi</label>
       <label index="flexform.sheets.general.searchFieldList">Elenco dei campi di ricerca: ad esempio title,short,image,links</label>
       <label index="flexform.sheets.general.andWhere">Where dichiarazione: ad esempio AND sys_language_uid=###LANG_UID###</label>
       <label index="flexform.sheets.general.sort">Ordina per: ad esempio datetime:DESC</label>
@@ -183,6 +187,7 @@
       <label index="flexform.sheets.general.styleFile">Plantilla de CSS:</label>
       <label index="flexform.sheets.general.jsFile">Plantilla de JavaScript:</label>
       <label index="flexform.sheets.general.table">Nombre de la tabla: por ejemplo tt_news</label>
+      <label index="flexform.sheets.general.allowedTables">Animales db-tables: llene este campo o los campos próximos</label>
       <label index="flexform.sheets.general.searchFieldList">Lista de campos de búsqueda: por ejemplo title,short,image,links</label>
       <label index="flexform.sheets.general.andWhere">Where declaración: por ejemplo AND sys_language_uid=###LANG_UID###</label>
       <label index="flexform.sheets.general.sort">Ordenar por: por ejemplo datetime:DESC</label>
@@ -243,6 +248,7 @@
       <label index="flexform.sheets.general.styleFile">Format CSS:</label>
       <label index="flexform.sheets.general.jsFile">Format JavaScript:</label>
       <label index="flexform.sheets.general.table">Tabelul nume: de exemplu tt_news</label>
+      <label index="flexform.sheets.general.allowedTables">Db-a permis tabele: completați acest câmp sau în următoarele domenii</label>
       <label index="flexform.sheets.general.searchFieldList">Domeniul lista de căutare: de exemplu title,short,image,links</label>
       <label index="flexform.sheets.general.andWhere">Where declaraţie: de exemplu AND sys_language_uid=###LANG_UID###</label>
       <label index="flexform.sheets.general.sort">Sortare după: de exemplu datetime:DESC</label>
