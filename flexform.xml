@@ -203,7 +203,6 @@
         </linkText>
         <disableControl>
             <TCEforms>
-				<exclude>1</exclude>
                 <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.disableControl</label>
                 <config>
                     <type>select</type>
@@ -248,7 +247,6 @@
         </dirName>
         <maxW>
             <TCEforms>
-				<exclude>1</exclude>
                 <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.images.maxW</label>
                 <config>
                     <type>input</type>
@@ -260,7 +258,6 @@
         </maxW>
         <maxH>
             <TCEforms>
-				<exclude>1</exclude>
                 <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.images.maxH</label>
                 <config>
                     <type>input</type>
@@ -272,7 +269,6 @@
         </maxH>
         <maxWthumb>
             <TCEforms>
-				<exclude>1</exclude>
                 <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.images.maxWthumb</label>
                 <config>
                     <type>input</type>
@@ -284,7 +280,6 @@
         </maxWthumb>
         <maxHthumb>
             <TCEforms>
-				<exclude>1</exclude>
                 <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.images.maxHthumb</label>
                 <config>
                     <type>input</type>
@@ -296,7 +291,6 @@
         </maxHthumb>
         <setTitle>
             <TCEforms>
-				<exclude>1</exclude>
                 <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.images.setTitle</label>
                 <config>
                     <type>select</type>
@@ -319,7 +313,6 @@
         </setTitle>
         <checkDefaultLang>
             <TCEforms>
-				<exclude>1</exclude>
                 <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.images.checkDefaultLang</label>
                 <config>
                     <type>select</type>
@@ -342,7 +335,6 @@
         </checkDefaultLang>
         <langField>
             <TCEforms>
-				<exclude>1</exclude>
                 <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.images.langField</label>
                 <config>
                     <type>select</type>
@@ -413,7 +405,6 @@
         </wrap>
         <auto>
             <TCEforms>
-				<exclude>1</exclude>
                 <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.auto</label>
                 <config>
                     <type>input</type>
@@ -425,7 +416,6 @@
         </auto>
         <animation>
             <TCEforms>
-				<exclude>1</exclude>
                 <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.animation</label>
                 <config>
                     <type>input</type>
@@ -579,7 +569,6 @@
         </easing>
         <start>
             <TCEforms>
-				<exclude>1</exclude>
                 <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.start</label>
                 <config>
                     <type>input</type>
@@ -591,7 +580,6 @@
         </start>
         <scroll>
             <TCEforms>
-				<exclude>1</exclude>
                 <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.scroll</label>
                 <config>
                     <type>input</type>
@@ -603,7 +591,6 @@
         </scroll>
         <visible>
             <TCEforms>
-				<exclude>1</exclude>
                 <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.jcarousel.visible</label>
                 <config>
                     <type>input</type>
