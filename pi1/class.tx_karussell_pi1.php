@@ -437,6 +437,7 @@ class tx_karussell_pi1 extends tslib_pibase {
             $markerArray['###NR###'] = $c;
             $markerArray['###UID###'] = $uid;
             $markerArray['###IS_START###'] = ($c == $this->start) ? 1 : 0;
+            $markerArray['###CONT_UID###'] = intval($this->cObj->data['uid']);
             if ($this->conf['fimila']) {
                 $fimilaArray = explode('|', $this->conf['fimila']);
                 if ($c==1) $markerArray['###FIMILA###'] = $fimilaArray[0];

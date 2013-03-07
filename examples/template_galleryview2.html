@@ -1,0 +1,92 @@
+<html>
+<body>
+<p>
+jQuery GalleryView example 2. You need the GalleryView plugin from here for this example:
+http://spaceforaname.com/galleryview/index.html
+Extract the zip file and copy it to your fileadmin-folder!
+Include the JS-file by Flexform or with TypoScript like below.
+Note: you need jquery.timers too! Copy that file into the galleryview-js-file or include it like below.
+Test it with this TypoScript:
+plugin.tx_karussell_pi1 {
+  templateFile = EXT:karussell/examples/template_galleryview2.html
+  jsFile = fileadmin/template/GalleryView/js/jquery.galleryview-3.0-dev.js
+  styleFile = fileadmin/template/GalleryView/css/jquery.galleryview-3.0-dev.css
+  jCarousel {
+	dynamic = false
+    animation = 1100
+    start = 1
+    auto = false
+  }
+}
+
+Note: you need jQuery FancyBox too for this example. Download it from here:
+http://fancyapps.com/fancybox/#license
+And include it and the GalleryView timer like this:
+page {
+  includeJS.timers = fileadmin/template/GalleryView/js/jquery.timers-1.2.js
+  includeJS.fancybox = fileadmin/template/fancyBox/source/jquery.fancybox.pack.js
+  includeJS.fancybuttons = fileadmin/template/fancyBox/source/helpers/jquery.fancybox-buttons.js
+  includeCSS.fancybox = fileadmin/template/fancyBox/source/jquery.fancybox.css
+  includeCSS.fancybuttons = fileadmin/template/fancyBox/source/helpers/jquery.fancybox-buttons.css
+}
+</p>
+
+
+Also avaiable here: ###UID###, ###MAX###, ###CONTROL###, ###ITEMS2###.
+<!-- ###TEMPLATE_GLOBAL#### begin -->
+<script type="text/javascript">
+jQuery(document).ready(function() {
+  $('#myGallery').galleryView({
+	panel_scale: 'fit',
+	panel_width: 459,
+	panel_height: 321,
+	frame_width: 70,
+	frame_height: 49,
+	infobar_opacity: 0.75,
+	enable_overlays: true,
+	show_panels: true,
+	show_panel_nav: true,
+	autoplay: false,
+	show_captions: false,
+	transition_speed: ###ANIMATION###,
+	start_frame: ###START###,
+	easing: ###EASING###
+  });
+  $("a.fancybox").fancybox({
+		prevEffect		: 'none',
+		nextEffect		: 'none',
+		closeBtn		: false,
+		helpers		: {
+			title	: { type : 'inside' },
+			buttons	: {}
+		}
+  });
+});
+function starteFancy() {
+	$('#bild###UID###1').click();
+	return;
+};
+</script>
+
+<ul id="myGallery">
+###ITEMS###
+</ul>
+<br />
+<p><a href="javascript:starteFancy();">Das ganze in groß ansehen</a> 
+###ITEMS2###
+</p>
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+The following markers are here avaiable: TITLE, CONTENT, IMAGE, IMAGETAG, LINK, LINKTAG, NR, UID, CONT_UID and IS_START.
+Furthermore: LOCAL_field and FOREIGN_field
+<!-- ###TEMPLATE_ITEM#### begin -->
+<li><img src="###IMAGE###" title="###TITLE###" data-description="###CONTENT###" /></li>
+<!-- ###TEMPLATE_ITEM#### end -->
+
+<!-- ###TEMPLATE_ITEM2#### begin -->
+<a href="###IMAGE###" rel="fancybox###CONT_UID###" class="fancybox" title="###TITLE###: ###CONTENT###" id="bild###CONT_UID######NR###">&nbsp;</a>
+<!-- ###TEMPLATE_ITEM2#### end -->
+
+</body>
+</html>
