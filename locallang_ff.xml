@@ -11,7 +11,7 @@
       <label index="flexform.sheets.general.styleFile">CSS file:</label>
       <label index="flexform.sheets.general.jsFile">JavaScript file:</label>
       <label index="flexform.sheets.general.table">Table name: e.g. tt_news</label>
-      <label index="flexform.sheets.general.allowedTables">Allowed db-tables: fill out this field or the next fields</label>
+      <label index="flexform.sheets.general.allowedTables">Allowed db-tables: fill out this field or the other fields</label>
       <label index="flexform.sheets.general.searchFieldList">Search field list: e.g. title,short,image,links</label>
       <label index="flexform.sheets.general.andWhere">Where-statement: e.g. AND sys_language_uid=###LANG_UID###</label>
       <label index="flexform.sheets.general.sort">Sort by: e.g. datetime:DESC</label>
@@ -28,6 +28,7 @@
       <label index="flexform.sheets.images.maxH">Max. height:</label>
       <label index="flexform.sheets.images.maxWthumb">Max. width (thumbnails):</label>
       <label index="flexform.sheets.images.maxHthumb">Max. height (thumbnails):</label>
+      <label index="flexform.sheets.images.removeWidthHeight">Remove width and height in the tag?</label>
       <label index="flexform.sheets.images.setTitle">Set the title as ALT-attribute?</label>
       <label index="flexform.sheets.images.checkDefaultLang">Check the default language?</label>
       <label index="flexform.sheets.images.langField">Where is the UID of the default language?</label>
@@ -54,7 +55,7 @@
       <label index="flexform.sheets.general.styleFile">CSS-Datei:</label>
       <label index="flexform.sheets.general.jsFile">JavaScript-Datei:</label>
       <label index="flexform.sheets.general.table">Name der Tabelle: z.B. tt_news</label>
-      <label index="flexform.sheets.general.allowedTables">Erlaubte DB-Tabellen: fülle dieses oder die nächsten Felder aus!</label>
+      <label index="flexform.sheets.general.allowedTables">Erlaubte DB-Tabellen: fülle dieses oder die anderen Felder aus!</label>
       <label index="flexform.sheets.general.searchFieldList">Suchfeld-Liste: z.B. title,short,image,links</label>
       <label index="flexform.sheets.general.andWhere">Where-Statement: z.B. AND sys_language_uid=###LANG_UID###</label>
       <label index="flexform.sheets.general.sort">Sortieren nach: Z.B. datetime:DESC</label>
@@ -71,6 +72,7 @@
       <label index="flexform.sheets.images.maxH">Max. Höhe:</label>
       <label index="flexform.sheets.images.maxWthumb">Max. Breite der Thumbnails:</label>
       <label index="flexform.sheets.images.maxHthumb">Max. Höhe der Thumbnails:</label>
+      <label index="flexform.sheets.images.removeWidthHeight">width und height im Tag entfernen?</label>
       <label index="flexform.sheets.images.setTitle">Den Titel als ALT verwenden?</label>
       <label index="flexform.sheets.images.checkDefaultLang">Hole notfalls das Bild von der Standardsprache?</label>
       <label index="flexform.sheets.images.langField">Wo steht die UID der Standardsprache?</label>
@@ -114,6 +116,7 @@
       <label index="flexform.sheets.images.maxH">Hauteur maximale:</label>
       <label index="flexform.sheets.images.maxWthumb">Largeur maximale (les vignettes):</label>
       <label index="flexform.sheets.images.maxHthumb">Hauteur maximale (les vignettes):</label>
+      <label index="flexform.sheets.images.removeWidthHeight">Remove width and height in the tag?</label>
       <label index="flexform.sheets.images.setTitle">Définir le titre que ALT?</label>
       <label index="flexform.sheets.images.checkDefaultLang">Vérifiez la langue par défaut?</label>
       <label index="flexform.sheets.images.langField">Où est l'UID de la langue par défaut?</label>
@@ -161,6 +164,7 @@
       <label index="flexform.sheets.images.maxH">Altezza massima:</label>
       <label index="flexform.sheets.images.maxWthumb">Larghezza massima (es miniature):</label>
       <label index="flexform.sheets.images.maxHthumb">Altezza massima (es miniature):</label>
+      <label index="flexform.sheets.images.removeWidthHeight">Remove width and height in the tag?</label>
       <label index="flexform.sheets.images.setTitle">Impostare il titolo come ALT?</label>
       <label index="flexform.sheets.images.checkDefaultLang">Verificare la lingua di default?</label>
       <label index="flexform.sheets.images.langField">Dove si trova l'UID della lingua di default?</label>
@@ -204,6 +208,7 @@
       <label index="flexform.sheets.images.maxH">Altura máxima:</label>
       <label index="flexform.sheets.images.maxWthumb">Ancho máximo (imágenes en miniatura):</label>
       <label index="flexform.sheets.images.maxHthumb">Altura máxima (imágenes en miniatura):</label>
+      <label index="flexform.sheets.images.removeWidthHeight">Remove width and height in the tag?</label>
       <label index="flexform.sheets.images.setTitle">Establecer el título como ALT?</label>
       <label index="flexform.sheets.images.checkDefaultLang">Compruebe el idioma por defecto?</label>
       <label index="flexform.sheets.images.langField">¿Dónde está el UID de la lengua por defecto?</label>
@@ -265,6 +270,7 @@
       <label index="flexform.sheets.images.maxH">Înălţimea maximă:</label>
       <label index="flexform.sheets.images.maxWthumb">Lăţime maximă (miniaturi):</label>
       <label index="flexform.sheets.images.maxHthumb">Înălţimea maximă (miniaturi):</label>
+      <label index="flexform.sheets.images.removeWidthHeight">Remove width and height in the tag?</label>
       <label index="flexform.sheets.images.setTitle">Setaţi titlu ca ALT?</label>
       <label index="flexform.sheets.images.checkDefaultLang">Verificaţi limba implicit?</label>
       <label index="flexform.sheets.images.langField">În cazul în care este UID de limba maternă?</label>

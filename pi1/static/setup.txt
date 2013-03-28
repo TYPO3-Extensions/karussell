@@ -42,6 +42,7 @@ plugin.tx_karussell_pi1 {
 		maxH =
 		maxWthumb =
 		maxHthumb =
+		removeWidthHeight = 0
 		checkDefaultLang = 0
 		langField = t3_origuid
 		setTitle = 0

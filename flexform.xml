@@ -289,6 +289,28 @@
                 </config>
             </TCEforms>
         </maxHthumb>
+        <removeWidthHeight>
+            <TCEforms>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.images.removeWidthHeight</label>
+                <config>
+                    <type>select</type>
+                    <items type="array">
+                        <numIndex index="0" type="array">
+                            <numIndex index="0">-</numIndex>
+                            <numIndex index="1"></numIndex>
+                        </numIndex>
+                        <numIndex index="1" type="array">
+                            <numIndex index="0">LLL:EXT:karussell/locallang_ff.xml:flexform.no</numIndex>
+                            <numIndex index="1">0</numIndex>
+                        </numIndex>
+                        <numIndex index="2" type="array">
+                            <numIndex index="0">LLL:EXT:karussell/locallang_ff.xml:flexform.yes</numIndex>
+                            <numIndex index="1">1</numIndex>
+                        </numIndex>
+                    </items>
+                </config>
+            </TCEforms>
+        </removeWidthHeight>
         <setTitle>
             <TCEforms>
                 <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.images.setTitle</label>

@@ -383,6 +383,16 @@ class tx_karussell_pi1 extends tslib_pibase {
                 //$imgTSConfig['params'] = 'id="bild'.$c.'"';
             }
             $bildTag = $this->cObj->IMAGE($imgTSConfig);
+            if ($this->conf['images.']['removeWidthHeight']) {
+            	$pos1 = strpos($bildTag, 'width=');
+            	$pos2 = strpos($bildTag, '" ', $pos1+5);
+            	if ($pos1>0 && $pos2>0)
+            		$bildTag = substr($bildTag, 0, $pos1-1) . substr($bildTag, $pos2+1);
+            	$pos1 = strpos($bildTag, 'height=');
+            	$pos2 = strpos($bildTag, '" ', $pos1+5);
+            	if ($pos1>0 && $pos2>0)
+            		$bildTag = substr($bildTag, 0, $pos1-1) . substr($bildTag, $pos2+1);
+            }
         } else {
             $bild = 'clear.gif';
             $bildTag = '';
@@ -570,6 +580,7 @@ class tx_karussell_pi1 extends tslib_pibase {
         $this->setFlexValue('images','maxH', 'sIMAGES', 0);
         $this->setFlexValue('images','maxWthumb', 'sIMAGES', 0);
         $this->setFlexValue('images','maxHthumb', 'sIMAGES', 0);
+        $this->setFlexValue('images','removeWidthHeight', 'sIMAGES', 0);
         $this->setFlexValue('images','setTitle', 'sIMAGES', 0);
         $this->setFlexValue('images','checkDefaultLang', 'sIMAGES', 0);
         $this->setFlexValue('images','langField', 'sIMAGES', 1);
