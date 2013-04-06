@@ -4,27 +4,27 @@
 }
 
 .jcarousel-skin-ie7 .jcarousel-container-horizontal {
-    width: 205px;
+    max-width: 205px;
     height: 295px;
 }
 
 .jcarousel-skin-ie7 .jcarousel-container-vertical {
-    width: 205px;
+    max-width: 205px;
     height: 295px;
 }
 
 .jcarousel-skin-ie7 .jcarousel-clip-horizontal {
-    width:  195px;
+    max-width:  195px;
     height: 295px;
 }
 
 .jcarousel-skin-ie7 .jcarousel-clip-vertical {
-    width:  195px;
+    max-width:  195px;
     height: 295px;
 }
 
 .jcarousel-skin-ie7 .jcarousel-item {
-    width: 195px;
+    max-width: 195px;
     height: 295px;
 }
 
