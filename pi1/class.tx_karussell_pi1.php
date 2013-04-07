@@ -400,6 +400,8 @@ class tx_karussell_pi1 extends tslib_pibase {
         
         $target = '';
         $targetTag = '';
+        $class = '';
+        $alt = '';
         if ($this->table<>'tx_karussell_inhalt' && $this->conf['parameterUID'] && $this->conf['destinationPID']) {
             $typolink_conf = array(
                 'parameter' => intval($this->conf['destinationPID']),
@@ -409,6 +411,26 @@ class tx_karussell_pi1 extends tslib_pibase {
             $link = $this->pi_getPageLink(intval($this->conf['destinationPID']), '', array(addslashes($this->conf['parameterUID']) => $uid));
         } else if ($link) {
             $link = trim($this->getFieldContent($link));
+			if (strpos($link, ' ') !== false) {
+				// es gibt einen target
+				$linkArray = explode(' ', $link);
+				if (substr($link, 0, 1) == '<') {
+					$link = $linkArray[1];
+					$target = $linkArray[2];
+					if ($target=='-') $target = '';
+					$class = $linkArray[3];
+					if ($class && $class!='-') $class = ' class="'.$class.'"';
+					$ende = strpos($linkArray[4], '"', 1);
+					if ($ende) {
+						$alt = substr($linkArray[4],1,$ende-1);
+						if ($alt) $alt = ' title="'.$alt.'"';
+					}
+				} else {
+					$link = $linkArray[0];
+					$target = $linkArray[1];
+				}
+				if ($target) $targetTag = ' target="'.$target.'"';
+			}
             if (is_numeric($link)) {
                 $typolink_conf = array(
                     'parameter' => $link,
@@ -416,16 +438,9 @@ class tx_karussell_pi1 extends tslib_pibase {
                 $linkTag = $this->cObj->typolink($this->conf['linkText'], $typolink_conf);
                 $link = $this->pi_getPageLink($link);
             } else {
-                if (strpos($link, ' ') !== false) {
-                    // es gibt einen target
-                    $linkArray = explode(' ', $link);
-                    $target = $linkArray[1];
-                    $targetTag = ' target="'.$target.'"';
-                    $link = $linkArray[0];
-                }
                 // http:// fehlt?
                 if ((substr($link, 0, 4) == 'www.')) $link = 'http://'.$link; 
-                $linkTag = '<a href="'.$link.'"'.$targetTag.'>'.$this->conf['linkText'].'</a>';
+                $linkTag = '<a href="'.$link.'"'.$targetTag.$class.$alt.'>'.$this->conf['linkText'].'</a>';
             }
         }
         
