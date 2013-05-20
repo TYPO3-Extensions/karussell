@@ -420,7 +420,8 @@ class tx_karussell_pi1 extends tslib_pibase {
 					if ($target=='-') $target = '';
 					$class = $linkArray[3];
 					if ($class && $class!='-') $class = ' class="'.$class.'"';
-					$ende = strpos($linkArray[4], '"', 1);
+					$ende = 0;
+					if ($linkArray[4]) $ende = strpos($linkArray[4], '"', 1);
 					if ($ende) {
 						$alt = substr($linkArray[4],1,$ende-1);
 						if ($alt) $alt = ' title="'.$alt.'"';
@@ -506,7 +507,7 @@ class tx_karussell_pi1 extends tslib_pibase {
             break;
             
             default:
-                if ($this->conf["use_stdWrap"]==1 || $this->conf["use_stdWrap"]==$fN) {
+                if ($this->conf["use_stdWrap"]==1 || $this->conf["use_stdWrap"]===$fN) {
                     $feld = $this->formatStr($this->internal['currentRow'][$fN]);
                 //    $feld = $this->parseObj->TS_links_rte($this->pi_RTEcssText($this->internal['currentRow'][$fN]));
                 } else if ($this->conf["nl2br"]==1) {
@@ -587,6 +588,7 @@ class tx_karussell_pi1 extends tslib_pibase {
         $this->setFlexValue('','destinationPID', 'sDEF', 0);
         $this->setFlexValue('','foreignSelect', 'sDEF', 1);
         $this->setFlexValue('','disableControl', 'sDEF', 0);
+        $this->setFlexValue('','use_stdWrap', 'sDEF', 0);
         $this->setFlexValue('','linkText', 'sDEF', 1);
         $this->setFlexValue('','crop', 'sDEF', 0);
         $this->setFlexValue('listView','results_at_a_time', 'sDEF', 0);

@@ -223,6 +223,28 @@
                 </config>
             </TCEforms>
         </disableControl>
+        <use_stdWrap>
+            <TCEforms>
+                <label>LLL:EXT:karussell/locallang_ff.xml:flexform.sheets.general.use_stdWrap</label>
+                <config>
+                    <type>select</type>
+                    <items type="array">
+                        <numIndex index="0" type="array">
+                            <numIndex index="0">-</numIndex>
+                            <numIndex index="1"></numIndex>
+                        </numIndex>
+                        <numIndex index="1" type="array">
+                            <numIndex index="0">LLL:EXT:karussell/locallang_ff.xml:flexform.no</numIndex>
+                            <numIndex index="1">0</numIndex>
+                        </numIndex>
+                        <numIndex index="2" type="array">
+                            <numIndex index="0">LLL:EXT:karussell/locallang_ff.xml:flexform.yes</numIndex>
+                            <numIndex index="1">1</numIndex>
+                        </numIndex>
+                    </items>
+                </config>
+            </TCEforms>
+        </use_stdWrap>
        </el>
       </ROOT>
     </sDEF>

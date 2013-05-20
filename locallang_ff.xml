@@ -22,6 +22,7 @@
       <label index="flexform.sheets.general.crop">Crop the content after max. ... chars:</label>
       <label index="flexform.sheets.general.linkText">Text for the link-tag:</label>
       <label index="flexform.sheets.general.disableControl">Disable control-elements (e.g. thumbnails):</label>
+      <label index="flexform.sheets.general.use_stdWrap">Use stdWrap for the content element?</label>
       <label index="flexform.sheets.images.title">Images</label>
       <label index="flexform.sheets.images.dirName">Directory name in the "uploads" folder: e.g. pics</label>
       <label index="flexform.sheets.images.maxW">Max. width:</label>
@@ -66,6 +67,7 @@
       <label index="flexform.sheets.general.crop">Schneide den Inhalt nach maximal ... Zeichen ab:</label>
       <label index="flexform.sheets.general.linkText">Text für das a-href-Tag:</label>
       <label index="flexform.sheets.general.disableControl">Control-Elemente (z.B. Thumbnails) abschalten:</label>
+      <label index="flexform.sheets.general.use_stdWrap">Benutze stdWrap für das Content-Element?</label>
       <label index="flexform.sheets.images.title">Bilder</label>
       <label index="flexform.sheets.images.dirName">Verzeichnis-Namen in dem Ordner "uploads": Z.B. pics</label>
       <label index="flexform.sheets.images.maxW">Max. Breite:</label>
@@ -110,6 +112,7 @@
       <label index="flexform.sheets.general.crop">Recadrer le contenu après ... caractères:</label>
       <label index="flexform.sheets.general.linkText">Texte du lien-tag:</label>
       <label index="flexform.sheets.general.disableControl">Désactiver le contrôle-éléments (par exemple les vignettes):</label>
+      <label index="flexform.sheets.general.use_stdWrap">Use stdWrap for the content element?</label>
       <label index="flexform.sheets.images.title">Images</label>
       <label index="flexform.sheets.images.dirName">Le nom du répertoire dans le dossier "uploads": par example pics</label>
       <label index="flexform.sheets.images.maxW">Largeur maximale:</label>
@@ -158,6 +161,7 @@
       <label index="flexform.sheets.general.crop">Ritagliare il contenuto dopo ... caratteri:</label>
       <label index="flexform.sheets.general.linkText">Testo per il link-tag:</label>
       <label index="flexform.sheets.general.disableControl">Disabilitare il controllo-elementi (ad es miniature):</label>
+      <label index="flexform.sheets.general.use_stdWrap">Use stdWrap for the content element?</label>
       <label index="flexform.sheets.images.title">Immagini</label>
       <label index="flexform.sheets.images.dirName">Nome della directory nella cartella di "uploads": ad esempio pics</label>
       <label index="flexform.sheets.images.maxW">Larghezza massima:</label>
@@ -202,6 +206,7 @@
       <label index="flexform.sheets.general.crop">Recortar el contenido después de ... caracteres:</label>
       <label index="flexform.sheets.general.linkText">El texto para el enlace de etiquetas::</label>
       <label index="flexform.sheets.general.disableControl">Desactivar el control de los elementos (por ejemplo, imágenes en miniatura):</label>
+      <label index="flexform.sheets.general.use_stdWrap">Use stdWrap for the content element?</label>
       <label index="flexform.sheets.images.title">Imágenes</label>
       <label index="flexform.sheets.images.dirName">Nombre de directorio en la carpeta "uploads": por ejemplo pics</label>
       <label index="flexform.sheets.images.maxW">Ancho máximo:</label>
@@ -264,6 +269,7 @@
       <label index="flexform.sheets.general.crop">Decuparea de conţinut, după ... caractere:</label>
       <label index="flexform.sheets.general.linkText">Text pentru link-ul tag-ul:</label>
       <label index="flexform.sheets.general.disableControl">Dezactivează control-elemente (de exemplu, miniaturi):</label>
+      <label index="flexform.sheets.general.use_stdWrap">Use stdWrap for the content element?</label>
       <label index="flexform.sheets.images.title">Imagini</label>
       <label index="flexform.sheets.images.dirName">Nume de director în folderul "uploads": de exemplu pics</label>
       <label index="flexform.sheets.images.maxW">Lăţime maximă:</label>

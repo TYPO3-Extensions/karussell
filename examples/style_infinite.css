@@ -1,0 +1,43 @@
+#carousel_container {
+width:100%;
+height:270px;
+}
+#carousel_inner {  
+float:left; /* important for inline positioning */  
+width:902px; /* important (this width = width of list item(including margin) * items shown */  
+overflow: hidden;/* important (hide the items outside the div) */  
+}  
+  
+#carousel_ul {  
+position:relative;
+left:-231px; /* important (this should be negative number of list items width(including margin) */  
+list-style-type: none; /* removing the default styling for unordered list items */  
+margin: 0px;
+padding: 0px;
+width:9999px; /* important */  
+}  
+  
+#carousel_ul li{  
+float: left; /* important for inline positioning of the list items */  
+width:210px;/* fixed width, important */  
+height:270px;
+padding:0;
+margin:0 21px 0 0;
+}  
+
+#left_scroll, #right_scroll{  
+float:left;
+height:100%;
+width:39px;
+}  
+#left_scroll a, #right_scroll a{
+display: block;
+width:100%;
+height:31px;
+margin-top:134px;
+}
+#left_scroll a {
+}
+#right_scroll a {
+}
+}
