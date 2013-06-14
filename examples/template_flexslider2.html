@@ -1,0 +1,66 @@
+<html>
+<body>
+<p>
+jQuery FlexSlider 2 example. You need the FlexSlider 2 plugin from here for this example:
+http://flexslider.woothemes.com/thumbnail-slider.html
+Extract the zip file and copy it to your fileadmin-folder!
+Include the JS-file by Flexform or with TypoScript.
+Test it with this TypoScript:
+
+plugin.tx_karussell_pi1 {
+  templateFile = EXT:karussell/examples/template_flexslider2.html
+  jsFile = fileadmin/template/woothemes-FlexSlider/jquery.flexslider-min.js
+  styleFile = fileadmin/template/woothemes-FlexSlider/flexslider.css
+  jCarousel {
+	dynamic = false
+  }
+}
+</p>
+
+
+Also avaiable here: ###UID###, ###MAX###, ###CONTROL###, ###ITEMS2###.
+<!-- ###TEMPLATE_GLOBAL#### begin -->
+<script type="text/javascript">
+$(window).load(function() {
+	  // The slider being synced must be initialized first
+	  $('#carousel').flexslider({
+	    animation: "slide",
+	    controlNav: false,
+	    animationLoop: false,
+	    slideshow: false,
+	    itemWidth: 210,
+	    itemMargin: 5,
+	    asNavFor: '#slider'
+	  });
+	   
+	  $('#slider').flexslider({
+	    animation: "slide",
+	    controlNav: false,
+	    animationLoop: false,
+	    slideshow: false,
+	    sync: "#carousel"
+	  });
+});
+</script>
+
+<div id="slider" class="flexslider">
+  <ul class="slides">
+###ITEMS###
+  </ul>
+</div>
+<div id="carousel" class="flexslider">
+  <ul class="slides">
+###ITEMS###
+  </ul>
+</div>
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+The following markers are here avaiable: TITLE, CONTENT, IMAGE, IMAGETAG, LINK, LINKTAG, NR, UID and IS_START.
+Furthermore: LOCAL_field and FOREIGN_field
+<!-- ###TEMPLATE_ITEM#### begin -->
+<li><img src="###IMAGE###" title="###TITLE###" /></li>
+<!-- ###TEMPLATE_ITEM#### end -->
+
+</body>
+</html>

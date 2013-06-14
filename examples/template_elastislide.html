@@ -1,0 +1,79 @@
+<html>
+<body>
+<p>
+jQuery Elastislide example. You need the Elastislide plugin from here for this example:
+http://tympanus.net/codrops/2011/09/12/elastislide-responsive-carousel/
+Extract the zip file and copy it to your fileadmin-folder!
+Include the JS-file by Flexform or with TypoScript.
+Test it with this TypoScript:
+
+plugin.tx_karussell_pi1 {
+  templateFile = EXT:karussell/examples/template_elastislide.html
+  jsFile = fileadmin/template/elastislide/js/jquery.elastislide.js
+  styleFile = fileadmin/template/elastislide/css/elastislide.css
+  images {
+	maxWthumb = 150
+	maxHthumb = 100
+	setTitle = 1
+  }
+}
+
+And:
+page.headerData.1234 = TEXT
+page.headerData.1234.value (
+<script type="text/javascript" src="fileadmin/template/elastislide/js/modernizr.custom.17475.js"></script>
+<script type="text/javascript" src="fileadmin/template/elastislide/js/jquerypp.custom.js"></script>
+)
+</p>
+
+
+Also avaiable here: ###UID###, ###MAX###, ###CONTROL###, ###ITEMS2###.
+<!-- ###TEMPLATE_GLOBAL#### begin -->
+<div class="gallery">
+	<!-- Elastislide Carousel -->
+	<ul id="carousel" class="elastislide-list">
+		###CONTROL###
+	</ul>
+	<!-- End Elastislide Carousel -->
+
+	<div class="image-preview">
+		<img id="preview" src="/clear.gif" />
+	</div>
+</div>
+
+<script type="text/javascript">
+//jQuery(document).ready(function() {
+	var current = 0,
+	 preview = $( '#preview' ),
+	 carouselEl = $( '#carousel' ),
+	 carouselItems = carouselEl.children(),
+	 carousel = carouselEl.elastislide( {
+		current : current,
+		minItems : 4,
+		onClick : function( el, pos, evt ) {
+			changeImage( el, pos );
+			evt.preventDefault();
+		},
+		onReady : function() {
+			changeImage( carouselItems.eq( current ), current );
+		}
+	} );
+//});
+
+function changeImage( el, pos ) {
+	preview.attr( 'src', el.data( 'preview' ) );
+	carouselItems.removeClass( 'current-img' );
+	el.addClass( 'current-img' );
+	carousel.setCurrent( pos );
+
+}
+</script>
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+<!-- ###TEMPLATE_CONTROL#### begin -->
+	<li data-preview="###IMAGE###"><a href="#">###IMAGETAG###</a></li>
+<!-- ###TEMPLATE_CONTROL#### end -->
+
+</body>
+</html>
