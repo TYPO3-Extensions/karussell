@@ -1,0 +1,39 @@
+.karussell {
+  padding:0;
+  margin:0;
+  color:#fff;
+  position:relative;
+  max-height:525px;
+  overflow:hidden;
+}
+
+.karussell ul {
+  margin:0;
+}
+.karussell ul li{
+  float:none;
+  display:block;
+}
+.karussell .grau-ka-middle,
+.karussell .grau-ka-last,
+.karussell .ka-middle,
+.karussell .ka-last {
+  display:none;
+}
+.karussell img {
+  display:block;
+}
+.karussell .grau {
+  position:absolute;
+  z-index:7;
+  max-width:664px;
+  padding:18px;
+  bottom:0;
+  background: url(/typo3conf/ext/karussell/examples/halbgrau.png);
+}
+.karussell h3 {
+  white-space:nowrap;
+}
+.karussell p {
+  margin-top: 15px;
+}

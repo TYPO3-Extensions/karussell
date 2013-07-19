@@ -365,7 +365,8 @@ class tx_karussell_pi1 extends tslib_pibase {
                 $imgArray = explode(',', $imageName);
                 $imageName = $imgArray[0];
             }
-            $bild = 'uploads/'.$this->dirName.'/'.$imageName;
+            $bild = $this->dirName.'/'.$imageName;
+            if (substr($bild, 0, 10) != 'fileadmin/') $bild = "uploads/$bild";
             $imgTSConfig = array();
             $imgTSConfig['file'] = $bild;
             $imgTSConfig['altText'] = '';

@@ -24,7 +24,7 @@
       <label index="flexform.sheets.general.disableControl">Disable control-elements (e.g. thumbnails):</label>
       <label index="flexform.sheets.general.use_stdWrap">Use stdWrap for the content element?</label>
       <label index="flexform.sheets.images.title">Images</label>
-      <label index="flexform.sheets.images.dirName">Directory name in the "uploads" folder: e.g. pics</label>
+      <label index="flexform.sheets.images.dirName">Directory name in the "uploads" folder: e.g. pics - or a fileadmin-folder</label>
       <label index="flexform.sheets.images.maxW">Max. width:</label>
       <label index="flexform.sheets.images.maxH">Max. height:</label>
       <label index="flexform.sheets.images.maxWthumb">Max. width (thumbnails):</label>
@@ -69,7 +69,7 @@
       <label index="flexform.sheets.general.disableControl">Control-Elemente (z.B. Thumbnails) abschalten:</label>
       <label index="flexform.sheets.general.use_stdWrap">Benutze stdWrap für das Content-Element?</label>
       <label index="flexform.sheets.images.title">Bilder</label>
-      <label index="flexform.sheets.images.dirName">Verzeichnis-Namen in dem Ordner "uploads": Z.B. pics</label>
+      <label index="flexform.sheets.images.dirName">Verzeichnis-Namen in dem Ordner "uploads": Z.B. pics - oder ein fileadmin-Ordner</label>
       <label index="flexform.sheets.images.maxW">Max. Breite:</label>
       <label index="flexform.sheets.images.maxH">Max. Höhe:</label>
       <label index="flexform.sheets.images.maxWthumb">Max. Breite der Thumbnails:</label>

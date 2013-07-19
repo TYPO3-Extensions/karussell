@@ -1,0 +1,55 @@
+<html>
+<body>
+<p>A simple responsive Karussell-Template without jCarousel. Test it with:</p>
+<pre>
+plugin.tx_karussell_pi1 {
+  templateFile = EXT:karussell/examples/template_responsive.html
+  styleFile = EXT:karussell/examples/style_responsive.css
+  jsFile = 
+  nl2br = 0
+  fimila = ka-first|ka-middle|ka-last
+}
+</pre>
+
+
+<!-- ###TEMPLATE_GLOBAL#### end -->
+<script type="text/javascript">
+(function($) {
+    var speed = 800;
+    var first = 0;
+    var pause = 7000;
+	var max = ###MAX###;
+	var jetzt = 1;
+	
+	function tack() {
+		$('#grau-'+jetzt).animate({
+        //    height: 0
+        }, speed).hide('medium', function() {
+            $('#item-'+jetzt).hide();
+			jetzt++;
+			if (jetzt>max) jetzt = 1;
+			$('#item-'+jetzt).show();
+			$('#grau-'+jetzt).show('medium');
+        });
+	}
+    setInterval(tack, pause);
+})(jQuery);
+</script>
+
+<div class="karussell">
+<ul id="mycarousel">
+###ITEMS###
+</ul>
+</div>
+<!-- ###TEMPLATE_GLOBAL#### end -->
+
+
+<!-- ###TEMPLATE_ITEM#### end -->
+<li class="carousel-item ###FIMILA###" id="item-###NR###">
+  ###IMAGETAG###
+  <div class="grau grau-###FIMILA###" id="grau-###NR###"><h3>###TITLE###</h3><p>###CONTENT###</p></div>
+</li>
+<!-- ###TEMPLATE_ITEM#### end -->
+
+</body>
+</html>
