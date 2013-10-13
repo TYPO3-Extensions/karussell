@@ -287,7 +287,7 @@ class tx_karussell_pi1 extends tslib_pibase {
             
         // Make list table rows
         $c=0;
-        mysql_data_seek($res, $c);
+        $GLOBALS['TYPO3_DB']->sql_data_seek($res, $c);
         while($this->internal['currentRow'] = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res))  {
              $c++;
              $visible_wrap_start='';

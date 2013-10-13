@@ -15,7 +15,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'description' => 'This extension is based on the JS plugin "jQuery Carousel (jCarousel)". It allows you to display any content on a carousel, even with other JS plugins like Barousel, Scrollable, Roundabout, Galleryview, Bootstrap and others.',
 	'category' => 'plugin',
 	'shy' => 0,
-	'version' => '1.4.0',
+	'version' => '1.4.1',
 	'dependencies' => 'cms',
 	'conflicts' => '',
 	'priority' => '',
@@ -36,7 +36,7 @@ $EM_CONF[$_EXTKEY] = array(
 		'depends' => array(
 			'cms' => '',
 			'php' => '5.0.0-5.5.99',
-			'typo3' => '4.3.0-6.2.99',
+			'typo3' => '4.3.0-6.1.99',
 		),
 		'conflicts' => array(
 		),
